@@ -1,19 +1,16 @@
 # OC-P4-OhMyFood
- Projet N°4 parcours intégrateur web OpenClassrooms
+
+Projet N°4 parcours intégrateur web OpenClassrooms
 
 ## Lien GitHub
 
-```
-à definir
-```
+https://github.com/Strikelab/OC-P4-OhMyFood/
 
-## Lien Github Pages
+## Lien GitHub Pages
 
-```
-à definir
-```
+https://oc-ohmyfood.strikelab.fr/
 
-## Technologies 
+## Technologies
 
 - HTML5 / CSS3
 - [Sass](https://sass-lang.com/)
