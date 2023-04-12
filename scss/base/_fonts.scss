@@ -1,8 +1,23 @@
-h1 {
-  font-family: "Shrikhand", cursive;
+* {
+  font-family: $main-font;
 }
 
-p {
-  font-family: "Roboto", sans-serif;
-  color: $highlight-text-color;
+footer {
+  font-size: 16px;
+  line-height: 18.75px;
+
+  i {
+    font-size: 13px;
+  }
+}
+
+.footer__title {
+  font-family: $title-font;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 26.24px;
+}
+
+.footer__link--medium-500 {
+  font-weight: 500;
 }
