@@ -1,24 +1,36 @@
-
 .footer {
   @include flex($direction: column, $gap: 16px);
   color: $footer-font-color;
   background-color: $footer-background-color;
   padding: 22px 25px;
 
+  @media (min-width: 1440px) {
+    @include flex(row-reverse, initial, flex-end, 16px);
+    padding: 30px 25px;
+    height: 114px;
+  }
+
   &__list {
     @include flex($direction: column, $gap: 7px);
+
+    @media (min-width: 1440px) {
+      @include flex(row, initial, flex-end, 7px);
+    }
   }
 
   &__title {
     height: 27px;
+    width: 139px;
   }
 
   &__link {
     @include flex($align: center, $gap: 10px);
     height: 19px;
+    width: 190px;
 
-    &--height-20px {
+    &--alt-size {
       height: 20px;
+      width: 130px;
     }
   }
 }
