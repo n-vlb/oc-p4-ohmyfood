@@ -1,27 +1,24 @@
-footer {
-  display: flex;
-  flex-direction: column;
-  gap: 16px;
-  color: white;
+
+.footer {
+  @include flex($direction: column, $gap: 16px);
+  color: $footer-font-color;
   background-color: $footer-background-color;
   padding: 22px 25px;
 
-  h2 {
+  &__list {
+    @include flex($direction: column, $gap: 7px);
+  }
+
+  &__title {
     height: 27px;
   }
 
-  ul {
-    display: flex;
-    flex-direction: column;
-    gap: 7px;
-  }
-}
-.footer__link {
-  display: flex;
-  height: 19px;
-  gap: 10px;
-  align-items: center;
-  &--height-20px {
-    height: 20px;
+  &__link {
+    @include flex($align: center, $gap: 10px);
+    height: 19px;
+
+    &--height-20px {
+      height: 20px;
+    }
   }
 }

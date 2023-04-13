@@ -1,18 +1,10 @@
-* {
+// Typography
+body {
   font-family: $main-font;
 }
 
 h1 {
   font-family: $title-font;
-}
-
-footer {
-  font-size: 16px;
-  line-height: 18.75px;
-
-  i {
-    font-size: 13px;
-  }
 }
 
 .footer__title {
@@ -22,6 +14,9 @@ footer {
   line-height: 26.24px;
 }
 
+.footer__link-icon {
+  font-size: 13px;
+}
 .footer__link--medium-500 {
   font-weight: 500;
 }

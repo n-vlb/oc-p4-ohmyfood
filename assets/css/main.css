@@ -1,4 +1,4 @@
-@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&family=Shrikhand&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&family=Shrikhand&display=swap"); /* display */
 * {
   box-sizing: border-box;
   margin: 0;
@@ -14,20 +14,12 @@ a {
   color: inherit;
 }
 
-* {
+body {
   font-family: "Roboto", sans-serif;
 }
 
 h1 {
   font-family: "Shrikhand", cursive;
-}
-
-footer {
-  font-size: 16px;
-  line-height: 18.75px;
-}
-footer i {
-  font-size: 13px;
 }
 
 .footer__title {
@@ -37,32 +29,41 @@ footer i {
   line-height: 26.24px;
 }
 
+.footer__link-icon {
+  font-size: 13px;
+}
+
 .footer__link--medium-500 {
   font-weight: 500;
 }
 
-footer {
+.footer {
   display: flex;
   flex-direction: column;
+  justify-content: initial;
+  align-items: initial;
   gap: 16px;
   color: white;
   background-color: #353535;
   padding: 22px 25px;
 }
-footer h2 {
-  height: 27px;
-}
-footer ul {
+.footer__list {
   display: flex;
   flex-direction: column;
+  justify-content: initial;
+  align-items: initial;
   gap: 7px;
 }
-
+.footer__title {
+  height: 27px;
+}
 .footer__link {
   display: flex;
-  height: 19px;
-  gap: 10px;
+  flex-direction: initial;
+  justify-content: initial;
   align-items: center;
+  gap: 10px;
+  height: 19px;
 }
 .footer__link--height-20px {
   height: 20px;
