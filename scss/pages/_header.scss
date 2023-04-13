@@ -1,0 +1,30 @@
+.header {
+  &__logo-container {
+    @include flex(column, center, center);
+    width: 100%;
+    height: 63px;
+    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.15); //?? to do--> mixin  ??
+    position: relative; // for box-shadow visibility
+    @media (min-width: 1440px) {
+      height: 96px;
+    }
+  }
+  &__logo-txt {
+    @media (min-width: 1440px) {
+      display: none; //hide logo version txt
+    }
+  }
+  &__logo-img {
+    display: none; //hide logo version svg
+    @media (min-width: 1440px) {
+      @include flex; //show logo version svg
+      width: 200px;
+      height: 34.2px;
+    }
+  }
+  &__location {
+    @include flex(row, center, center, 17px);
+    background-color: $tertiary-background-color;
+    height: 50px;
+  }
+}

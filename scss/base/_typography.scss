@@ -2,9 +2,14 @@
 body {
   font-family: $main-font;
 }
+.header__logo-txt{
+ font-family:$title-font;
+ font-size:30px;
+ font-weight:400;
+}
 
-h1 {
-  font-family: $title-font;
+.header__location {
+  font-weight: 500;
 }
 
 .footer__title {
