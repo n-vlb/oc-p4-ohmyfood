@@ -27,8 +27,22 @@
 .functioning {
   @include flex($direction: column, $gap: 26px);
   padding: 48px 20px 68px 20px;
+  @media (min-width: 1440px) {
+    @include flex($direction: column, $align: center, $gap: 25px);
+    padding: 50px 180px;
+  }
+
+  &__title {
+    @media (min-width: 1440px) {
+      width: calc(3 * 335px + 2 * 24px);
+    }
+  }
 
   &__buttons-container {
     @include flex($direction: column, $gap: 25px);
+    @media (min-width: 1440px) {
+      @include flex($direction: row, $gap: 24px);
+      width: calc(3 * 335px + 2 * 24px);
+    }
   }
 }
