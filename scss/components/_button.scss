@@ -1,0 +1,126 @@
+.button-style1 {
+  @include flex(row, center, center, 0);
+  color: white;
+  margin: auto;
+  width: 218px;
+  height: 50px;
+  border-radius: 25px;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.25);
+  background: linear-gradient(
+    -3.33deg,
+    $gradient-primary-color -11.44%,
+    $gradient-secondary-color 123.93%
+  );
+
+  &:hover,
+  &:focus {
+    background: linear-gradient(
+      -3.33deg,
+      $gradient-primary-color-light -11.44%,
+      $gradient-secondary-color-light 123.93%
+    );
+    box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.25);
+  }
+
+  &--sizeM {
+    width: 186px;
+  }
+}
+
+.functioning__buttons-container {
+  //ol
+  
+    counter-reset: nbButton; /*Initialize*/
+}
+  // Ressource : https://www.alsacreations.com/article/lire/1210-donnez-du-style-a-vos-listes.html
+  //li
+  .button-style2 {
+    @include flex($align: center);
+    list-style-type: none;
+    counter-increment: nbButton; /*Increment*/
+    //puce
+    &:before {
+      z-index: +1; /*display on top of button*/
+      @include flex($justify: center, $align: center);
+      content: counter(nbButton); /*display counter*/
+      background-color: $gradient-primary-color;
+      color: white;
+      width: 24px;
+      height: 24px;
+      border-radius: 50%;
+    }
+
+    &__icon {
+      color: grey;
+    }
+
+    &__link {
+      transform: translateX(-12.5px);
+      width: 100%;
+      border-radius: 20px;
+      padding-left: 24px;
+      @include flex($align: center, $gap: 23px);
+      background-color: $secondary-background-color;
+      height: 72.38px;
+      box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.15);
+      &:hover,
+      &:focus {
+        background-color: lighten($secondary-background-color, 2%);
+        box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.15);
+        //select icon's button when button is hover or selected
+        .button-style2__icon {
+          color: $gradient-primary-color;
+        }
+      }
+    }
+  }
+
+
+// .functioning {
+//   //ol
+//   &__buttons-container {
+//     counter-reset: nbButton; /*Initialize*/
+//   }
+//   // Ressource : https://www.alsacreations.com/article/lire/1210-donnez-du-style-a-vos-listes.html
+//   //li
+//   &__button {
+//     @include flex($align: center);
+//     list-style-type: none;
+//     counter-increment: nbButton; /*Increment*/
+//     //puce
+//     &:before {
+//       z-index: +1; /*display on top of button*/
+//       @include flex($justify: center, $align: center);
+//       content: counter(nbButton); /*display counter*/
+//       background-color: $gradient-primary-color;
+//       color: white;
+//       width: 24px;
+//       height: 24px;
+//       border-radius: 50%;
+//     }
+//   }
+//   &__button-icon {
+//     color: grey;
+//   }
+//   //a
+//   &__button-link {
+//     transform: translateX(-12.5px);
+//     width: 100%;
+//     border-radius: 20px;
+//     padding-left: 24px;
+//     @include flex($align: center, $gap: 23px);
+//     background-color: $secondary-background-color;
+//     height: 72.38px;
+//     box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.15);
+
+//     &:hover,
+//     &:focus {
+//       background-color: lighten($secondary-background-color, 2%);
+//       box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.15);
+//       //select icon's button when button is hover or selected
+//       .functioning__button-icon {
+//         color: $gradient-primary-color;
+//       }
+//     }
+//   }
+// }

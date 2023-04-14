@@ -11,9 +11,12 @@ $color3: #89c8fa;
 $color4: #003a68;
 
 // ## -- Gradient colors -------------------- ## //
-
 $gradient-primary-color: #9356dc;
 $gradient-secondary-color: #ff79da;
+
+
+$gradient-primary-color-light:lighten($gradient-primary-color, 3%);
+$gradient-secondary-color-light:lighten($gradient-secondary-color, 3%);
 
 // ## -- Background colors ------------------ ## //
 

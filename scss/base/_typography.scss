@@ -1,24 +1,52 @@
 // Typography
+//global
 body {
   font-family: $main-font;
 }
-.header__logo-txt{
- font-family:$title-font;
- font-size:30px;
- font-weight:400;
-}
-
-.header__location {
-  font-weight: 500;
-}
-
-.footer__title {
+//header
+.header__logo-txt {
   font-family: $title-font;
+  font-size: 30px;
   font-weight: 400;
-  font-size: 18px;
-  line-height: 26.24px;
+}
+//main
+.location {
+  font-weight: 500;
 }
 
-.footer__link--medium-500 {
+.reservation {
+  &__title {
+    font-size: 24px;
+    font-weight: 700;
+  }
+
+  &__content {
+    font-size: 18px;
+    font-weight: 300;
+  }
+}
+.functioning {
+  &__title {
+    font-size: 24px;
+    font-weight: 700;
+  }
+}
+
+//buttons
+.button-style1, .button-style2 {
   font-weight: 500;
+}
+
+//footer
+.footer {
+  &__title {
+    font-family: $title-font;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 26.24px;
+  }
+
+  &__link--medium-500 {
+    font-weight: 500;
+  }
 }

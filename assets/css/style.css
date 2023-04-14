@@ -1,0 +1,280 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&family=Shrikhand&display=swap"); /* display */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+ul {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+fieldset,
+button,
+input {
+  border: none;
+}
+
+:focus {
+  outline: none;
+}
+
+body {
+  font-family: "Roboto", sans-serif;
+}
+
+.header__logo-txt {
+  font-family: "Shrikhand", cursive;
+  font-size: 30px;
+  font-weight: 400;
+}
+
+.location {
+  font-weight: 500;
+}
+
+.reservation__title {
+  font-size: 24px;
+  font-weight: 700;
+}
+.reservation__content {
+  font-size: 18px;
+  font-weight: 300;
+}
+
+.functioning__title {
+  font-size: 24px;
+  font-weight: 700;
+}
+
+.button-style1, .button-style2 {
+  font-weight: 500;
+}
+
+.footer__title {
+  font-family: "Shrikhand", cursive;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 26.24px;
+}
+.footer__link--medium-500 {
+  font-weight: 500;
+}
+
+.button-style1 {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  gap: 0;
+  color: white;
+  margin: auto;
+  width: 218px;
+  height: 50px;
+  border-radius: 25px;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.25);
+  background: linear-gradient(-3.33deg, #9356dc -11.44%, #ff79da 123.93%);
+}
+.button-style1:hover, .button-style1:focus {
+  background: linear-gradient(-3.33deg, #9b63df -11.44%, #ff88de 123.93%);
+  box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.25);
+}
+.button-style1--sizeM {
+  width: 186px;
+}
+
+.functioning__buttons-container {
+  counter-reset: nbButton; /*Initialize*/
+}
+
+.button-style2 {
+  display: flex;
+  flex-direction: initial;
+  justify-content: initial;
+  align-items: center;
+  gap: initial;
+  list-style-type: none;
+  counter-increment: nbButton; /*Increment*/
+}
+.button-style2:before {
+  z-index: 1; /*display on top of button*/
+  display: flex;
+  flex-direction: initial;
+  justify-content: center;
+  align-items: center;
+  gap: initial;
+  content: counter(nbButton); /*display counter*/
+  background-color: #9356dc;
+  color: white;
+  width: 24px;
+  height: 24px;
+  border-radius: 50%;
+}
+.button-style2__icon {
+  color: grey;
+}
+.button-style2__link {
+  transform: translateX(-12.5px);
+  width: 100%;
+  border-radius: 20px;
+  padding-left: 24px;
+  display: flex;
+  flex-direction: initial;
+  justify-content: initial;
+  align-items: center;
+  gap: 23px;
+  background-color: #f7f7f7;
+  height: 72.38px;
+  box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.15);
+}
+.button-style2__link:hover, .button-style2__link:focus {
+  background-color: #fcfcfc;
+  box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.15);
+}
+.button-style2__link:hover .button-style2__icon, .button-style2__link:focus .button-style2__icon {
+  color: #9356dc;
+}
+
+.location {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  gap: 17px;
+  background-color: #eaeaea;
+  height: 50px;
+}
+
+.reservation {
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 0;
+  padding-top: 39px;
+  padding-bottom: 59px;
+  background-color: #f3f3f3;
+}
+.reservation__title {
+  margin-bottom: 12px;
+  width: calc(100% - 100px);
+  min-width: 275px;
+}
+.reservation__content {
+  margin-bottom: 27px;
+  width: calc(100% - 60px);
+  min-width: 315px;
+}
+
+.functioning {
+  display: flex;
+  flex-direction: column;
+  justify-content: initial;
+  align-items: initial;
+  gap: 26px;
+  padding: 48px 20px 68px 20px;
+}
+.functioning__buttons-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: initial;
+  align-items: initial;
+  gap: 25px;
+}
+
+.header__logo-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: initial;
+  width: 100%;
+  height: 63px;
+  box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.15);
+  position: relative;
+}
+@media (min-width: 1440px) {
+  .header__logo-container {
+    height: 96px;
+  }
+}
+@media (min-width: 1440px) {
+  .header__logo-txt {
+    display: none;
+  }
+}
+.header__logo-img {
+  display: none;
+}
+@media (min-width: 1440px) {
+  .header__logo-img {
+    display: flex;
+    flex-direction: initial;
+    justify-content: initial;
+    align-items: initial;
+    gap: initial;
+    width: 200px;
+    height: 34.2px;
+  }
+}
+
+.footer {
+  display: flex;
+  flex-direction: column;
+  justify-content: initial;
+  align-items: initial;
+  gap: 16px;
+  color: white;
+  background-color: #353535;
+  padding: 22px 25px;
+}
+@media (min-width: 1440px) {
+  .footer {
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: initial;
+    align-items: flex-end;
+    gap: 16px;
+    padding: 30px 25px;
+    height: 114px;
+  }
+}
+.footer__list {
+  display: flex;
+  flex-direction: column;
+  justify-content: initial;
+  align-items: initial;
+  gap: 7px;
+}
+@media (min-width: 1440px) {
+  .footer__list {
+    display: flex;
+    flex-direction: row;
+    justify-content: initial;
+    align-items: flex-end;
+    gap: 7px;
+  }
+}
+.footer__title {
+  height: 27px;
+  width: 139px;
+}
+.footer__link {
+  display: flex;
+  flex-direction: initial;
+  justify-content: initial;
+  align-items: center;
+  gap: 10px;
+  height: 19px;
+  width: 190px;
+}
+.footer__link--alt-size {
+  height: 20px;
+  width: 130px;
+}/*# sourceMappingURL=style.css.map */

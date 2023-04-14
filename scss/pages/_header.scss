@@ -22,9 +22,4 @@
       height: 34.2px;
     }
   }
-  &__location {
-    @include flex(row, center, center, 17px);
-    background-color: $tertiary-background-color;
-    height: 50px;
-  }
 }

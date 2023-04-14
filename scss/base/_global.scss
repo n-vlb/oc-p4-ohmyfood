@@ -12,3 +12,12 @@ a {
   text-decoration: none;
   color: inherit;
 }
+fieldset,
+button,
+input {
+  border: none;
+}
+
+:focus {
+  outline: none;
+}
