@@ -1,4 +1,4 @@
-.location {
+.localisation {
   @include flex(row, center, center, 17px);
   background-color: $tertiary-background-color;
   height: 50px;
@@ -24,7 +24,7 @@
   }
 }
 
-.functioning {
+.guide {
   @include flex($direction: column, $gap: 26px);
   padding: 48px 20px 68px 20px;
   @media (min-width: 1440px) {

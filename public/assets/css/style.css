@@ -43,35 +43,44 @@ body {
   font-weight: 400;
 }
 
-.location {
+.localisation {
+  font-family: "Roboto", sans-serif;
+  font-size: 16px;
   font-weight: 500;
 }
 
 .reservation__title {
+  font-family: "Roboto", sans-serif;
   font-size: 24px;
   font-weight: 700;
 }
 .reservation__content {
+  font-family: "Roboto", sans-serif;
   font-size: 18px;
   font-weight: 300;
 }
 
-.functioning__title {
+.guide__title {
+  font-family: "Roboto", sans-serif;
   font-size: 24px;
   font-weight: 700;
 }
 
-.button-style1, .button-style2 {
+.button-style1,
+.button-style2 {
+  font-family: "Roboto", sans-serif;
+  font-size: 16px;
   font-weight: 500;
 }
 
 .footer__title {
   font-family: "Shrikhand", cursive;
-  font-weight: 400;
   font-size: 18px;
-  line-height: 26.24px;
+  font-weight: 400;
 }
-.footer__link--medium-500 {
+.footer__link--semi-bold {
+  font-family: "Roboto", sans-serif;
+  font-size: 16px;
   font-weight: 500;
 }
 
@@ -82,23 +91,22 @@ body {
   align-items: center;
   gap: 0;
   color: white;
-  margin: auto;
   width: 218px;
   height: 50px;
   border-radius: 25px;
   box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.25);
   background: linear-gradient(-3.33deg, #9356dc -11.44%, #ff79da 123.93%);
 }
+.button-style1--sizeM {
+  width: 186px;
+}
 .button-style1:hover, .button-style1:focus {
   background: linear-gradient(-3.33deg, #9b63df -11.44%, #ff88de 123.93%);
   box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.25);
 }
-.button-style1--sizeM {
-  width: 186px;
-}
 
-.functioning__buttons-container {
-  counter-reset: nbButton; /*Initialize*/
+.guide__buttons-container {
+  counter-reset: nbButton; /*Initialize counter*/
 }
 
 .button-style2 {
@@ -108,7 +116,7 @@ body {
   align-items: center;
   gap: initial;
   list-style-type: none;
-  counter-increment: nbButton; /*Increment*/
+  counter-increment: nbButton; /*Increment counter*/
 }
 @media (min-width: 1440px) {
   .button-style2 {
@@ -116,13 +124,13 @@ body {
   }
 }
 .button-style2:before {
-  z-index: 1; /*display atop of button*/
   display: flex;
   flex-direction: initial;
   justify-content: center;
   align-items: center;
   gap: initial;
   content: counter(nbButton); /*display counter*/
+  z-index: 1; /*display atop of button*/
   background-color: #9356dc;
   color: white;
   width: 24px;
@@ -154,7 +162,7 @@ body {
   color: #9356dc;
 }
 
-.location {
+.localisation {
   display: flex;
   flex-direction: row;
   justify-content: center;
@@ -186,7 +194,7 @@ body {
   min-width: 315px;
 }
 
-.functioning {
+.guide {
   display: flex;
   flex-direction: column;
   justify-content: initial;
@@ -195,7 +203,7 @@ body {
   padding: 48px 20px 68px 20px;
 }
 @media (min-width: 1440px) {
-  .functioning {
+  .guide {
     display: flex;
     flex-direction: column;
     justify-content: initial;
@@ -205,11 +213,11 @@ body {
   }
 }
 @media (min-width: 1440px) {
-  .functioning__title {
+  .guide__title {
     width: 1053px;
   }
 }
-.functioning__buttons-container {
+.guide__buttons-container {
   display: flex;
   flex-direction: column;
   justify-content: initial;
@@ -217,7 +225,7 @@ body {
   gap: 25px;
 }
 @media (min-width: 1440px) {
-  .functioning__buttons-container {
+  .guide__buttons-container {
     display: flex;
     flex-direction: row;
     justify-content: initial;

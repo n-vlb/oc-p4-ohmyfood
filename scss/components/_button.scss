@@ -1,7 +1,6 @@
 .button-style1 {
   @include flex(row, center, center, 0);
   color: white;
-  margin: auto;
   width: 218px;
   height: 50px;
   border-radius: 25px;
@@ -12,6 +11,10 @@
     $gradient-secondary-color 123.93%
   );
 
+  &--sizeM {
+    width: 186px;
+  }
+  
   &:hover,
   &:focus {
     background: linear-gradient(
@@ -21,18 +24,13 @@
     );
     box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.25);
   }
-
-  &--sizeM {
-    width: 186px;
-  }
 }
 // style ol list-items
 // Ressource : https://www.alsacreations.com/article/lire/1210-donnez-du-style-a-vos-listes.html
-.functioning {
+.guide {
   //ol
   &__buttons-container {
-   
-    counter-reset: nbButton; /*Initialize*/
+    counter-reset: nbButton; /*Initialize counter*/
   }
 }
 
@@ -40,17 +38,16 @@
 .button-style2 {
   @include flex($align: center);
   list-style-type: none;
-  counter-increment: nbButton; /*Increment*/
-  @media(min-width:1440px){
-    width:335px;
+  counter-increment: nbButton; /*Increment counter*/
+  @media (min-width: 1440px) {
+    width: 335px;
   }
-
 
   //puce
   &:before {
-    z-index: +1; /*display atop of button*/
     @include flex($justify: center, $align: center);
     content: counter(nbButton); /*display counter*/
+    z-index: +1; /*display atop of button*/
     background-color: $gradient-primary-color;
     color: white;
     width: 24px;

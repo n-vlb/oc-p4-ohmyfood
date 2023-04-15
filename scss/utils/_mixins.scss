@@ -7,3 +7,9 @@
     align-items:$align;
     gap:$gap;
 }
+
+@mixin typography($family:$main-font, $size:16px, $weight:$regular){
+    font-family:$family;
+    font-size:$size;
+    font-weight:$weight;
+}

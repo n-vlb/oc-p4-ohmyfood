@@ -5,48 +5,43 @@ body {
 }
 //header
 .header__logo-txt {
-  font-family: $title-font;
-  font-size: 30px;
-  font-weight: 400;
+  @include typography($family: $title-font, $size: 30px);
 }
 //main
-.location {
-  font-weight: 500;
+.localisation {
+  @include typography($weight: $semi-bold);
 }
 
 .reservation {
   &__title {
-    font-size: 24px;
-    font-weight: 700;
+    @include typography($size: 24px, $weight: $bold);
   }
 
   &__content {
-    font-size: 18px;
-    font-weight: 300;
+    @include typography($size: 18px, $weight: $thin);
   }
 }
-.functioning {
+.guide {
   &__title {
-    font-size: 24px;
-    font-weight: 700;
+    @include typography($size: 24px, $weight: $bold);
   }
 }
 
 //buttons
-.button-style1, .button-style2 {
-  font-weight: 500;
+.button-style1,
+.button-style2 {
+  @include typography($weight: $semi-bold);
 }
+
+
 
 //footer
 .footer {
   &__title {
-    font-family: $title-font;
-    font-weight: 400;
-    font-size: 18px;
-    line-height: 26.24px;
+    @include typography($family: $title-font, $size: 18px);
   }
 
-  &__link--medium-500 {
-    font-weight: 500;
+  &__link--semi-bold {
+    @include typography($weight:$semi-bold);
   }
 }
