@@ -17,7 +17,7 @@ https://oc-ohmyfood.strikelab.fr/
 
 ## Auteurs
 
-- StrikeLab
+- StrikeLab contact@strikelab.fr
 
 ## License
 
