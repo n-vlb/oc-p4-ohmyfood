@@ -13,27 +13,24 @@ body {
 }
 
 .reservation {
-  &__title {
-    @include typography($size: 24px, $weight: $bold);
-  }
-
   &__content {
     @include typography($size: 18px, $weight: $thin);
   }
 }
-.guide {
+
+.card {
   &__title {
-    @include typography($size: 24px, $weight: $bold);
+    @include typography($size: 18px, $weight: $bold);
+  }
+
+  &__subtitle {
+    @include typography($size: 17px, $weight: $thin);
   }
 }
-
-//buttons
 .button-style1,
 .button-style2 {
   @include typography($weight: $semi-bold);
 }
-
-
 
 //footer
 .footer {
@@ -42,6 +39,6 @@ body {
   }
 
   &__link--semi-bold {
-    @include typography($weight:$semi-bold);
+    @include typography($weight: $semi-bold);
   }
 }

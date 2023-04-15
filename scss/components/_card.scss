@@ -1,0 +1,19 @@
+.card {
+    @include flex($direction:column, $gap:16px);
+  width: 100%;
+  height: 251px;
+  border-radius: 15px;
+  background-color: white;
+
+  &__picture {
+    border-radius: 15px 15px 0 0;
+
+    height: calc(251px - 77px);
+    width: 100%;
+    object-fit: cover;
+  }
+  &__content {
+    @include flex($direction:column, $gap:5px);
+    padding-left:13px;
+  }
+}
