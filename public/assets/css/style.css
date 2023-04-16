@@ -297,13 +297,27 @@ body {
   -o-object-fit: cover;
      object-fit: cover;
 }
+.card__content-container {
+  display: flex;
+  flex-direction: initial;
+  justify-content: initial;
+  align-items: initial;
+  gap: initial;
+}
 .card__content {
+  display: flex;
+  flex-direction: initial;
+  justify-content: space-between;
+  align-items: initial;
+  gap: initial;
+  padding: 0 25px 0 13px;
+}
+.card__description {
   display: flex;
   flex-direction: column;
   justify-content: initial;
   align-items: initial;
   gap: 5px;
-  padding-left: 13px;
 }
 
 .localisation {
