@@ -2,19 +2,17 @@
   box-sizing: border-box;
   margin: 0;
   padding: 0;
-  
+}
 
+body {
+  width: 100%;
+  margin: auto;
 }
-body{
-  width:100%;
-//  @include flex($direction:column, $align:center);
-//  max-width:1440px;
-  margin:auto;
-  // background-color:aquamarine;
+
+footer {
+  width: 100%;
 }
-footer{
-  width:100%;
-}
+
 ul {
   list-style: none;
 }
@@ -23,6 +21,7 @@ a {
   text-decoration: none;
   color: inherit;
 }
+
 fieldset,
 button,
 input {
