@@ -1,12 +1,25 @@
+
+//  vendors
 @import "./vendors/google-fonts";
+
+// utils
 @import "./utils/variables";
 @import "./utils/mixins";
+
+// base
 @import "./base/global";
 @import "./base/typography";
-@import "./components/button";
-@import "./components/card";
-@import "./pages/homepage";
+
+// layout
 @import "./layout/header";
 @import "./layout/footer";
+
+// components
+@import "./components/button";
+@import "./components/card";
+
+// pages
+@import "./pages/homepage";
+
 
 
