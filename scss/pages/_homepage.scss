@@ -27,6 +27,7 @@
 .guide {
   @include flex($direction: column, $gap: 26px);
   padding: 48px 20px 68px 20px;
+
   @media (min-width: 1440px) {
     @include flex($direction: column, $align: center, $gap: 25px);
     padding: 50px 180px;
@@ -40,6 +41,7 @@
 
   &__buttons-container {
     @include flex($direction: column, $gap: 25px);
+
     @media (min-width: 1440px) {
       @include flex($direction: row, $gap: 24px);
       width: calc(3 * 335px + 2 * 24px);
@@ -48,12 +50,26 @@
 }
 
 .restaurants {
-  @include flex($direction: column, $justify: center, $gap: 26px);
+  @include flex(column, center, center, 26px);
   background-color: $primary-background-color;
   padding: 57px 17.5px 66px 17.5px;
 
+  @media (min-width: 1440px) {
+    padding: 30px 180px;
+    align-items: center;
+  }
+
   &__cards-container {
     @include flex(column, center, center, 18px);
+    width: 100%;
+
+    @media (min-width: 1440px) {
+      max-width: calc(1440px - 180px * 2);
+      display: grid;
+      grid-template-columns: repeat(2, calc(50% - 50px));
+      grid-row-gap: 50px;
+      grid-column-gap: 100px;
+    }
   }
 
   &__card-link {
@@ -62,5 +78,10 @@
 
   &__title {
     padding-left: 3px;
+    width: 100%;
+
+    @media (min-width: 1440px) {
+      max-width: calc(1440px - 180px * 2); // keep title and cards align
+    }
   }
 }
