@@ -65,6 +65,11 @@ body {
   font-size: 17px;
   font-weight: 300;
 }
+.card--new {
+  font-family: "Roboto", sans-serif;
+  font-size: 14px;
+  font-weight: 500;
+}
 
 .button-style1,
 .button-style2 {
@@ -82,6 +87,97 @@ body {
   font-family: "Roboto", sans-serif;
   font-size: 16px;
   font-weight: 500;
+}
+
+.header__logo-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: initial;
+  width: 100%;
+  height: 63px;
+  box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.15);
+  position: relative;
+}
+@media (min-width: 1440px) {
+  .header__logo-container {
+    height: 96px;
+  }
+}
+@media (min-width: 1440px) {
+  .header__logo-txt {
+    display: none;
+  }
+}
+.header__logo-img {
+  display: none;
+}
+@media (min-width: 1440px) {
+  .header__logo-img {
+    display: flex;
+    flex-direction: initial;
+    justify-content: initial;
+    align-items: initial;
+    gap: initial;
+    width: 200px;
+    height: 34.2px;
+  }
+}
+
+.footer {
+  display: flex;
+  flex-direction: column;
+  justify-content: initial;
+  align-items: initial;
+  gap: 16px;
+  color: white;
+  background-color: #353535;
+  padding: 22px 25px;
+}
+@media (min-width: 1440px) {
+  .footer {
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: initial;
+    align-items: flex-end;
+    gap: 16px;
+    padding: 30px 25px;
+    height: 114px;
+  }
+}
+.footer__list {
+  display: flex;
+  flex-direction: column;
+  justify-content: initial;
+  align-items: initial;
+  gap: 7px;
+}
+@media (min-width: 1440px) {
+  .footer__list {
+    display: flex;
+    flex-direction: row;
+    justify-content: initial;
+    align-items: flex-end;
+    gap: 7px;
+  }
+}
+.footer__title {
+  height: 27px;
+  width: 139px;
+}
+.footer__link {
+  display: flex;
+  flex-direction: initial;
+  justify-content: initial;
+  align-items: center;
+  gap: 10px;
+  height: 19px;
+  width: 190px;
+}
+.footer__link--alt-size {
+  height: 20px;
+  width: 130px;
 }
 
 .button-style1 {
@@ -173,6 +269,18 @@ body {
   border-radius: 15px;
   background-color: white;
   box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.1);
+}
+.card--new::before {
+  content: "Nouveau !";
+  position: absolute;
+  right: 3.53%;
+  top: 5.18%;
+  width: 80px;
+  height: 29px;
+  line-height: 29px;
+  text-align: center;
+  background-color: #99e2d0;
+  color: #008766;
 }
 .card:hover {
   box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.15);
@@ -305,6 +413,7 @@ body {
 }
 .restaurants__card-link {
   width: 100%;
+  position: relative;
 }
 .restaurants__title {
   padding-left: 3px;
@@ -314,95 +423,4 @@ body {
   .restaurants__title {
     max-width: 1080px;
   }
-}
-
-.header__logo-container {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  gap: initial;
-  width: 100%;
-  height: 63px;
-  box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.15);
-  position: relative;
-}
-@media (min-width: 1440px) {
-  .header__logo-container {
-    height: 96px;
-  }
-}
-@media (min-width: 1440px) {
-  .header__logo-txt {
-    display: none;
-  }
-}
-.header__logo-img {
-  display: none;
-}
-@media (min-width: 1440px) {
-  .header__logo-img {
-    display: flex;
-    flex-direction: initial;
-    justify-content: initial;
-    align-items: initial;
-    gap: initial;
-    width: 200px;
-    height: 34.2px;
-  }
-}
-
-.footer {
-  display: flex;
-  flex-direction: column;
-  justify-content: initial;
-  align-items: initial;
-  gap: 16px;
-  color: white;
-  background-color: #353535;
-  padding: 22px 25px;
-}
-@media (min-width: 1440px) {
-  .footer {
-    display: flex;
-    flex-direction: row-reverse;
-    justify-content: initial;
-    align-items: flex-end;
-    gap: 16px;
-    padding: 30px 25px;
-    height: 114px;
-  }
-}
-.footer__list {
-  display: flex;
-  flex-direction: column;
-  justify-content: initial;
-  align-items: initial;
-  gap: 7px;
-}
-@media (min-width: 1440px) {
-  .footer__list {
-    display: flex;
-    flex-direction: row;
-    justify-content: initial;
-    align-items: flex-end;
-    gap: 7px;
-  }
-}
-.footer__title {
-  height: 27px;
-  width: 139px;
-}
-.footer__link {
-  display: flex;
-  flex-direction: initial;
-  justify-content: initial;
-  align-items: center;
-  gap: 10px;
-  height: 19px;
-  width: 190px;
-}
-.footer__link--alt-size {
-  height: 20px;
-  width: 130px;
 }

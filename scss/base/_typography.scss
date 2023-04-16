@@ -26,7 +26,11 @@ body {
   &__subtitle {
     @include typography($size: 17px, $weight: $thin);
   }
+  &--new {
+    @include typography($size: 14px, $weight: $semi-bold);
+  }
 }
+
 .button-style1,
 .button-style2 {
   @include typography($weight: $semi-bold);
