@@ -19,6 +19,9 @@ body {
 }
 
 .card {
+  &__like-icon{
+    font-size:1.375rem;
+  }
   &__title {
     @include typography($size: 18px, $weight: $bold);
   }
@@ -30,6 +33,7 @@ body {
     @include typography($size: 14px, $weight: $semi-bold);
   }
 }
+
 
 .button-style1,
 .button-style2 {

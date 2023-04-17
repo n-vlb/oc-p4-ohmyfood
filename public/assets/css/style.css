@@ -55,6 +55,9 @@ body {
   font-weight: 300;
 }
 
+.card__like-icon {
+  font-size: 1.375rem;
+}
 .card__title {
   font-family: "Roboto", sans-serif;
   font-size: 18px;
@@ -332,6 +335,14 @@ body {
   justify-content: initial;
   align-items: initial;
   gap: 5px;
+}
+.card__like-icon {
+  display: flex;
+  flex-direction: initial;
+  justify-content: initial;
+  align-items: flex-end;
+  gap: initial;
+  padding-bottom: 20px;
 }
 
 .localisation {

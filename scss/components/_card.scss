@@ -41,11 +41,15 @@
   }
   &__content {
     @include flex($justify:space-between);
-    // @include flex($direction: column, $gap: 5px);
+    
     padding: 0 25px 0 13px;
   }
   &__description {
     @include flex($direction: column, $gap: 5px);
+  }
+  &__like-icon{
+    @include flex($align:flex-end);
+    padding-bottom: calc(33px - 13px);
   }
  
 }
