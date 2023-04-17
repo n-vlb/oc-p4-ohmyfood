@@ -186,76 +186,68 @@ body {
   justify-content: center;
   align-items: center;
   gap: 0;
-  color: white;
   width: 218px;
   height: 50px;
   border-radius: 25px;
-  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.25);
+  color: white;
   background: linear-gradient(-3.33deg, #9356dc -11.44%, #ff79da 123.93%);
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.25);
+  position: relative;
+  z-index: 0;
+}
+.button-style1::before {
+  border-radius: inherit;
+  display: block;
+  height: 100%;
+  width: 100%;
+  content: "";
+  background: linear-gradient(-3.33deg, #9b63df -11.44%, #ff88de 123.93%);
+  box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.35);
+  z-index: -1;
+  opacity: 0;
+  transition: opacity 0.5s;
+  position: absolute;
+}
+.button-style1:hover::before, .button-style1:focus::before {
+  opacity: 1;
 }
 .button-style1--sizeM {
   width: 186px;
 }
-.button-style1:hover, .button-style1:focus {
-  background: linear-gradient(-3.33deg, #9b63df -11.44%, #ff88de 123.93%);
-  box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.35);
-}
 
-.guide__buttons-container {
-  counter-reset: nbButton; /*Initialize counter*/
-}
-
-.button-style2 {
+.button-style1 {
   display: flex;
-  flex-direction: initial;
-  justify-content: initial;
-  align-items: center;
-  gap: initial;
-  list-style-type: none;
-  counter-increment: nbButton; /*Increment counter*/
-}
-@media (min-width: 1440px) {
-  .button-style2 {
-    width: 335px;
-  }
-}
-.button-style2:before {
-  display: flex;
-  flex-direction: initial;
+  flex-direction: row;
   justify-content: center;
   align-items: center;
-  gap: initial;
-  content: counter(nbButton); /*display counter*/
-  z-index: 1; /*display atop of button*/
-  background-color: #9356dc;
+  gap: 0;
+  width: 218px;
+  height: 50px;
+  border-radius: 25px;
   color: white;
-  width: 24px;
-  height: 24px;
-  border-radius: 50%;
+  background: linear-gradient(-3.33deg, #9356dc -11.44%, #ff79da 123.93%);
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.25);
+  position: relative;
+  z-index: 0;
 }
-.button-style2__icon {
-  color: #7a7a7a;
-}
-.button-style2__link {
-  margin-left: -12px;
+.button-style1::before {
+  border-radius: inherit;
+  display: block;
+  height: 100%;
   width: 100%;
-  border-radius: 20px;
-  padding-left: 24px;
-  display: flex;
-  flex-direction: initial;
-  justify-content: initial;
-  align-items: center;
-  gap: 23px;
-  background-color: #f7f7f7;
-  height: 72.38px;
-  box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.15);
+  content: "";
+  background: linear-gradient(-3.33deg, #9b63df -11.44%, #ff88de 123.93%);
+  box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.35);
+  z-index: -1;
+  opacity: 0;
+  transition: opacity 0.5s;
+  position: absolute;
 }
-.button-style2__link:hover, .button-style2__link:focus {
-  background-color: #f7f7f7;
-  box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.17);
+.button-style1:hover::before, .button-style1:focus::before {
+  opacity: 1;
 }
-.button-style2__link:hover .button-style2__icon, .button-style2__link:focus .button-style2__icon {
-  color: #9356dc;
+.button-style1--sizeM {
+  width: 186px;
 }
 
 .card {

@@ -1,4 +1,3 @@
-
 //  vendors
 @import "./vendors/google-fonts";
 
@@ -15,11 +14,9 @@
 @import "./layout/footer";
 
 // components
-@import "./components/button";
+@import "./components/button-style1";
+@import "./components/button-style2";
 @import "./components/card";
 
 // pages
 @import "./pages/homepage";
-
-
-
