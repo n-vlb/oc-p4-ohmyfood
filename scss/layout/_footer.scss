@@ -3,8 +3,8 @@
   color: $footer-font-color;
   background-color: $footer-background-color;
   padding: 22px 25px;
-
-  @media (min-width: 1440px) {
+  
+  @include for-size(desktop) {
     @include flex(row-reverse, initial, flex-end, 16px);
     padding: 30px 25px;
     height: 114px;
@@ -12,8 +12,10 @@
 
   &__list {
     @include flex($direction: column, $gap: 7px);
-
-    @media (min-width: 1440px) {
+    @include for-size(tablet) {
+      @include flex($direction:row, $gap:7px);
+    }
+    @include for-size(desktop) {
       @include flex(row, initial, flex-end, 7px);
     }
   }

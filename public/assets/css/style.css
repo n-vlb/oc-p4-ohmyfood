@@ -140,7 +140,7 @@ body {
   background-color: #353535;
   padding: 22px 25px;
 }
-@media (min-width: 1440px) {
+@media (min-width: 1024px) {
   .footer {
     display: flex;
     flex-direction: row-reverse;
@@ -158,7 +158,16 @@ body {
   align-items: initial;
   gap: 7px;
 }
-@media (min-width: 1440px) {
+@media (min-width: 768px) {
+  .footer__list {
+    display: flex;
+    flex-direction: row;
+    justify-content: initial;
+    align-items: initial;
+    gap: 7px;
+  }
+}
+@media (min-width: 1024px) {
   .footer__list {
     display: flex;
     flex-direction: row;
