@@ -51,37 +51,34 @@
 .restaurants {
   @include flex(column, center, center, 26px);
   background-color: $primary-background-color;
-  padding: 57px 17.5px 66px 17.5px;
-
-  @media (min-width: 1440px) {
-    padding: 30px 180px;
-    align-items: center;
+  padding: 54px 17.5px 66px 17.5px;
+  @include for-size(desktop) {
+    padding-top: 30px;
   }
 
   &__cards-container {
-    @include flex(column, center, center, 18px);
+    @include flex(row, center, center, 18px);
+    flex-wrap: wrap;
     width: 100%;
-
-    @media (min-width: 1440px) {
-      max-width: calc(1440px - 180px * 2);
-      display: grid;
-      grid-template-columns: repeat(2, calc(50% - 50px));
-      grid-row-gap: 50px;
-      grid-column-gap: 100px;
+    max-width: 1080px;
+    @include for-size(desktop) {
+      justify-content: space-between;
+      gap: 50px;
     }
   }
 
   &__card-link {
     width: 100%;
     position: relative; // permet le positionnement du badge
+    @include for-size(desktop) {
+      width: calc((100% - 50px) /2);
+      max-width: 490px;
+    }
   }
 
   &__title {
     padding-left: 3px;
     width: 100%;
-
-    @media (min-width: 1440px) {
-      max-width: calc(1440px - 180px * 2); // keep title and cards align
-    }
+    max-width: 1080px 
   }
 }

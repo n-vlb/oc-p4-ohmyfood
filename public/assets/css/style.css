@@ -301,7 +301,7 @@ body {
   box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.1);
 }
 .card--new::before {
-  content: "Nouveau !";
+  content: "Nouveau";
   position: absolute;
   right: 3.53%;
   top: 5.18%;
@@ -311,14 +311,11 @@ body {
   text-align: center;
   background-color: #99e2d0;
   color: #008766;
+  border-radius: 2px;
+  box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.15);
 }
 .card:hover {
   box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.15);
-}
-@media (min-width: 1440px) {
-  .card {
-    max-width: 490px;
-  }
 }
 .card__picture {
   border-radius: 15px 15px 0 0;
@@ -438,41 +435,41 @@ body {
   align-items: center;
   gap: 26px;
   background-color: #f3f3f3;
-  padding: 57px 17.5px 66px 17.5px;
+  padding: 54px 17.5px 66px 17.5px;
 }
-@media (min-width: 1440px) {
+@media (min-width: 1024px) {
   .restaurants {
-    padding: 30px 180px;
-    align-items: center;
+    padding-top: 30px;
   }
 }
 .restaurants__cards-container {
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
   justify-content: center;
   align-items: center;
   gap: 18px;
+  flex-wrap: wrap;
   width: 100%;
+  max-width: 1080px;
 }
-@media (min-width: 1440px) {
+@media (min-width: 1024px) {
   .restaurants__cards-container {
-    max-width: 1080px;
-    display: grid;
-    grid-template-columns: repeat(2, calc(50% - 50px));
-    grid-row-gap: 50px;
-    grid-column-gap: 100px;
+    justify-content: space-between;
+    gap: 50px;
   }
 }
 .restaurants__card-link {
   width: 100%;
   position: relative;
 }
+@media (min-width: 1024px) {
+  .restaurants__card-link {
+    width: calc((100% - 50px) / 2);
+    max-width: 490px;
+  }
+}
 .restaurants__title {
   padding-left: 3px;
   width: 100%;
-}
-@media (min-width: 1440px) {
-  .restaurants__title {
-    max-width: 1080px;
-  }
+  max-width: 1080px;
 }
