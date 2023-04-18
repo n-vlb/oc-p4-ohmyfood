@@ -1,9 +1,10 @@
+// # section localisation
 .localisation {
   @include flex(row, center, center, 17px);
   background-color: $tertiary-background-color;
   height: 50px;
 }
-
+// # section reservation
 .reservation {
   text-align: center;
   @include flex(column, center, center, 0);
@@ -23,32 +24,30 @@
     min-width: 315px;
   }
 }
-
+// # section guide
 .guide {
   @include flex($direction: column, $gap: 26px);
   padding: 48px 20px 68px 20px;
-
-  @media (min-width: 1440px) {
+  @include for-size(desktop) {
     @include flex($direction: column, $align: center, $gap: 25px);
-    padding: 50px 180px;
   }
 
   &__title {
-    @media (min-width: 1440px) {
-      width: calc(3 * 335px + 2 * 24px);
+    @include for-size(desktop) {
+      width: 100%;
+      max-width: calc(3 * 335px + 2 * 24px);
     }
   }
 
   &__buttons-container {
     @include flex($direction: column, $gap: 25px);
-
-    @media (min-width: 1440px) {
-      @include flex($direction: row, $gap: 24px);
-      width: calc(3 * 335px + 2 * 24px);
+    @include for-size(desktop) {
+      @include flex($direction: row, $justify: center, $gap: 24px);
+      width: calc(100%);
     }
   }
 }
-
+// # section restaurants
 .restaurants {
   @include flex(column, center, center, 26px);
   background-color: $primary-background-color;
@@ -74,7 +73,7 @@
 
   &__card-link {
     width: 100%;
-    position:relative; // permet le positionnement du badge
+    position: relative; // permet le positionnement du badge
   }
 
   &__title {

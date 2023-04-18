@@ -241,10 +241,12 @@ body {
   gap: initial;
   list-style-type: none;
   counter-increment: nbButton; /*Increment counter*/
+  width: 100%;
 }
-@media (min-width: 1440px) {
+@media (min-width: 1024px) {
   .button-style2 {
-    width: 335px;
+    width: 100%;
+    max-width: 335px;
   }
 }
 .button-style2:before {
@@ -396,19 +398,19 @@ body {
   gap: 26px;
   padding: 48px 20px 68px 20px;
 }
-@media (min-width: 1440px) {
+@media (min-width: 1024px) {
   .guide {
     display: flex;
     flex-direction: column;
     justify-content: initial;
     align-items: center;
     gap: 25px;
-    padding: 50px 180px;
   }
 }
-@media (min-width: 1440px) {
+@media (min-width: 1024px) {
   .guide__title {
-    width: 1053px;
+    width: 100%;
+    max-width: 1053px;
   }
 }
 .guide__buttons-container {
@@ -418,14 +420,14 @@ body {
   align-items: initial;
   gap: 25px;
 }
-@media (min-width: 1440px) {
+@media (min-width: 1024px) {
   .guide__buttons-container {
     display: flex;
     flex-direction: row;
-    justify-content: initial;
+    justify-content: center;
     align-items: initial;
     gap: 24px;
-    width: 1053px;
+    width: 100%;
   }
 }
 

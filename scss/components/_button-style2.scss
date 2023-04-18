@@ -1,59 +1,57 @@
-// bouton secondaire
+// # bouton secondaire
 // style ol list-items
 // Ressource : https://www.alsacreations.com/article/lire/1210-donnez-du-style-a-vos-listes.html
 .guide {
-    //ol
-    &__buttons-container {
-      counter-reset: nbButton; /*Initialize counter*/
-    }
+  //ol
+  &__buttons-container {
+    counter-reset: nbButton; /*Initialize counter*/
   }
-  //li
-  .button-style2 {
-    @include flex($align: center);
-    list-style-type: none;
-    counter-increment: nbButton; /*Increment counter*/
-    @media (min-width: 1440px) {
-      width: 335px;
-    }
-  
-    //puce
-    &:before {
-      @include flex($justify: center, $align: center);
-      content: counter(nbButton); /*display counter*/
-      z-index: +1; /*display atop of button*/
-      background-color: $gradient-primary-color;
-      color: white;
-      width: 24px;
-      height: 24px;
-      border-radius: 50%;
-    }
-  
-    &__icon {
-      color: $icon-button-style2-color;
-    }
-  
-    &__link {
-      // transform: translateX(-12.5px);
-      margin-left: -12px;
-      width: 100%;
-      border-radius: 20px;
-      padding-left: 24px;
-      @include flex($align: center, $gap: 23px);
-      background-color: $secondary-background-color;
-      height: 72.38px;
-      box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.15);
-      // @media(max-width:1440px){
-      //   width:calc(100% /3);
-      // }
-      &:hover,
-      &:focus {
-        background-color: lighten($secondary-background-color, 0.15%);
-        box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.17);
-        //select icon's button when button is hover or selected
-        .button-style2__icon {
-          color: $gradient-primary-color;
-        }
+}
+//li
+.button-style2 {
+  @include flex($align: center);
+  list-style-type: none;
+  counter-increment: nbButton; /*Increment counter*/
+  width: 100%;
+  @include for-size(desktop) {
+    width: 100%;
+    max-width: 335px;
+  }
+
+  //puce
+  &:before {
+    @include flex($justify: center, $align: center);
+    content: counter(nbButton); /*display counter*/
+    z-index: +1; /*display atop of button*/
+    background-color: $gradient-primary-color;
+    color: white;
+    width: 24px;
+    height: 24px;
+    border-radius: 50%;
+  }
+
+  &__icon {
+    color: $icon-button-style2-color;
+  }
+
+  &__link {
+    // transform: translateX(-12.5px);
+    margin-left: -12px;
+    width: 100%;
+    border-radius: 20px;
+    padding-left: 24px;
+    @include flex($align: center, $gap: 23px);
+    background-color: $secondary-background-color;
+    height: 72.38px;
+    box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.15);
+    &:hover,
+    &:focus {
+      background-color: lighten($secondary-background-color, 0.15%);
+      box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.17);
+      //select icon's button when button is hover or selected
+      .button-style2__icon {
+        color: $gradient-primary-color;
       }
     }
   }
-  
+}
