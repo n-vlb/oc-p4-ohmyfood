@@ -1,4 +1,6 @@
-@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&family=Shrikhand&display=swap"); /* display */
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&family=Shrikhand&display=swap"); /* flexbox */
+/* fonts */
+/*Media Queries - mobile first*/
 * {
   box-sizing: border-box;
   margin: 0;
