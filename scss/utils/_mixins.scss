@@ -1,4 +1,4 @@
-/* flexbox */
+// Flexbox
 @mixin flex(
   $direction: initial,
   $justify: initial,
@@ -12,15 +12,14 @@
   gap: $gap;
 }
 
-/* fonts */
+// Fonts
 @mixin typography($family: $main-font, $size: 16px, $weight: $regular) {
   font-family: $family;
   font-size: $size;
   font-weight: $weight;
 }
 
-/*Media Queries - mobile first*/
-
+// Media Queries - Mobile First
 @mixin for-size($size) {
   @if $size == tablet {
     @media (min-width: 768px) {
@@ -33,12 +32,3 @@
   }
 }
 
-@mixin heart-gradient {
-  background: linear-gradient(
-    $gradient-primary-color,
-    $gradient-secondary-color
-  );
-  background-clip: text;
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-}

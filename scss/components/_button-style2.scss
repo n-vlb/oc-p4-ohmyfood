@@ -1,17 +1,17 @@
-// # bouton secondaire
+/*Secondary button*/
 // style ol list-items
 // Ressource : https://www.alsacreations.com/article/lire/1210-donnez-du-style-a-vos-listes.html
 .guide {
   //ol
   &__buttons-container {
-    counter-reset: nbButton; /*Initialize counter*/
+    counter-reset: nbButton; //Initialize counter
   }
 }
 //li
 .button-style2 {
   @include flex($align: center);
   list-style-type: none;
-  counter-increment: nbButton; /*Increment counter*/
+  counter-increment: nbButton; //Increment counter
   width: 100%;
   @include for-size(desktop) {
     width: 100%;
@@ -21,8 +21,8 @@
   //puce
   &:before {
     @include flex($justify: center, $align: center);
-    content: counter(nbButton); /*display counter*/
-    z-index: +1; /*display atop of button*/
+    content: counter(nbButton); //display counter
+    z-index: +1; //display atop of button
     background-color: $gradient-primary-color;
     color: white;
     width: 24px;

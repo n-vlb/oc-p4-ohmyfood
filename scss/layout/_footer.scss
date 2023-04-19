@@ -1,9 +1,11 @@
+/*Footer*/
+
 .footer {
   @include flex($direction: column, $gap: 16px);
   color: $footer-font-color;
   background-color: $footer-background-color;
   padding: 22px 25px;
-  
+
   @include for-size(desktop) {
     @include flex(row-reverse, initial, flex-end, 16px);
     padding: 30px 25px;
@@ -12,9 +14,11 @@
 
   &__list {
     @include flex($direction: column, $gap: 7px);
+
     @include for-size(tablet) {
-      @include flex($direction:row, $gap:7px);
+      @include flex($direction: row, $gap: 7px);
     }
+
     @include for-size(desktop) {
       @include flex(row, initial, flex-end, 7px);
     }

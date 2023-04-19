@@ -1,10 +1,11 @@
-// # section localisation
+/* # Homepage*/
+/* ## section localisation  */
 .localisation {
   @include flex(row, center, center, 17px);
   background-color: $tertiary-background-color;
   height: 50px;
 }
-// # section reservation
+/* ## section reservation --- */
 .reservation {
   text-align: center;
   @include flex(column, center, center, 0);
@@ -24,7 +25,7 @@
     min-width: 315px;
   }
 }
-// # section guide
+/* ## section guide --------- */ 
 .guide {
   @include flex($direction: column, $gap: 26px);
   padding: 48px 20px 68px 20px;
@@ -47,7 +48,7 @@
     }
   }
 }
-// # section restaurants
+/* ## section restaurants --- */
 .restaurants {
   @include flex(column, center, center, 26px);
   background-color: $primary-background-color;

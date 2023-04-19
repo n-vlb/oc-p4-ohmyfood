@@ -1,6 +1,14 @@
-@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&family=Shrikhand&display=swap"); /* flexbox */
-/* fonts */
-/*Media Queries - mobile first*/
+/*Google fonts*/
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&family=Shrikhand&display=swap");
+/*Heart like gradient*/
+.card .fas:hover + .far, .card .fas:focus + .far, .card .fas {
+  background: linear-gradient(rgb(147, 86, 220), #ff79da);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+/* global parameters*/
 * {
   box-sizing: border-box;
   margin: 0;
@@ -35,6 +43,7 @@ input {
   outline: none;
 }
 
+/*Typography*/
 body {
   font-family: "Roboto", sans-serif;
 }
@@ -94,6 +103,7 @@ body {
   font-weight: 500;
 }
 
+/*Header*/
 .header__logo-container {
   display: flex;
   flex-direction: column;
@@ -130,6 +140,7 @@ body {
   }
 }
 
+/*Footer*/
 .footer {
   display: flex;
   flex-direction: column;
@@ -194,6 +205,7 @@ body {
   width: 130px;
 }
 
+/*Main button*/
 .button-style1 {
   display: flex;
   flex-direction: row;
@@ -229,8 +241,9 @@ body {
   width: 186px;
 }
 
+/*Secondary button*/
 .guide__buttons-container {
-  counter-reset: nbButton; /*Initialize counter*/
+  counter-reset: nbButton;
 }
 
 .button-style2 {
@@ -240,7 +253,7 @@ body {
   align-items: center;
   gap: initial;
   list-style-type: none;
-  counter-increment: nbButton; /*Increment counter*/
+  counter-increment: nbButton;
   width: 100%;
 }
 @media (min-width: 1024px) {
@@ -255,8 +268,8 @@ body {
   justify-content: center;
   align-items: center;
   gap: initial;
-  content: counter(nbButton); /*display counter*/
-  z-index: 1; /*display atop of button*/
+  content: counter(nbButton);
+  z-index: 1;
   background-color: rgb(147, 86, 220);
   color: white;
   width: 24px;
@@ -291,6 +304,7 @@ body {
   color: rgb(147, 86, 220);
 }
 
+/*Card restaurant*/
 .card {
   display: flex;
   flex-direction: column;
@@ -350,21 +364,12 @@ body {
   z-index: 1;
   opacity: 0;
   transition: opacity 0.25s;
-  background: linear-gradient(rgb(147, 86, 220), #ff79da);
-  background-clip: text;
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
 }
 .card .fas:hover, .card .fas:focus {
   opacity: 1;
 }
-.card .fas:hover + .far, .card .fas:focus + .far {
-  background: linear-gradient(rgb(147, 86, 220), #ff79da);
-  background-clip: text;
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-}
-
+/* # Homepage*/
+/* ## section localisation  */
 .localisation {
   display: flex;
   flex-direction: row;
@@ -375,6 +380,7 @@ body {
   height: 50px;
 }
 
+/* ## section reservation --- */
 .reservation {
   text-align: center;
   display: flex;
@@ -397,6 +403,7 @@ body {
   min-width: 315px;
 }
 
+/* ## section guide --------- */
 .guide {
   display: flex;
   flex-direction: column;
@@ -438,6 +445,7 @@ body {
   }
 }
 
+/* ## section restaurants --- */
 .restaurants {
   display: flex;
   flex-direction: column;
