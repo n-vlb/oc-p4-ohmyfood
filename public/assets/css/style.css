@@ -331,35 +331,38 @@ body {
   -o-object-fit: cover;
      object-fit: cover;
 }
-.card__content-container {
-  display: flex;
-  flex-direction: initial;
-  justify-content: initial;
-  align-items: initial;
-  gap: initial;
-}
-.card__content {
-  display: flex;
-  flex-direction: initial;
-  justify-content: space-between;
-  align-items: initial;
-  gap: initial;
-  padding: 0 25px 0 13px;
-}
 .card__description {
   display: flex;
   flex-direction: column;
   justify-content: initial;
   align-items: initial;
   gap: 5px;
+  padding: 0 25px 0 13px;
 }
-.card__like-icon {
-  display: flex;
-  flex-direction: initial;
-  justify-content: initial;
-  align-items: flex-end;
-  gap: initial;
-  padding-bottom: 20px;
+.card .fa-heart {
+  position: absolute;
+  right: 25px;
+  bottom: 32px;
+  width: 23px;
+  text-align: center;
+}
+.card .fas {
+  z-index: 1;
+  opacity: 0;
+  transition: opacity 0.25s;
+  background: linear-gradient(rgb(147, 86, 220), #ff79da);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+.card .fas:hover, .card .fas:focus {
+  opacity: 1;
+}
+.card .fas:hover + .far, .card .fas:focus + .far {
+  background: linear-gradient(rgb(147, 86, 220), #ff79da);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
 }
 
 .localisation {

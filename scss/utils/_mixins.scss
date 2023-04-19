@@ -32,3 +32,13 @@
     }
   }
 }
+
+@mixin heart-gradient {
+  background: linear-gradient(
+    $gradient-primary-color,
+    $gradient-secondary-color
+  );
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
