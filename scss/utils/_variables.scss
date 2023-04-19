@@ -1,8 +1,8 @@
 // # - Colors -------------------------------- # //
 // ## -- Badge - colors --------------------- ## //
 
-$badge-background-color: #99e2d0;
-$badge-text-color: #008766;
+$badge-primary-color: #99e2d0;
+$badge-secondary-color: #008766;
 
 // ## -- Fix me! - Where i'm used ?? -------- ## //
 
@@ -10,12 +10,13 @@ $badge-text-color: #008766;
 // $color4: #003a68;
 
 // ## -- Gradient colors -------------------- ## //
-$gradient-primary-color: #9356dc;
+// $gradient-primary-color: #9356dc;
+$gradient-primary-color: rgba(147, 86, 220)     ;
 $gradient-secondary-color: #ff79da;
 
 $gradient-primary-color--light: lighten($gradient-primary-color, 3%);
 $gradient-secondary-color--light: lighten($gradient-secondary-color, 3%);
-
+$gradient-secondary-color--dark: darken($gradient-secondary-color, 50%);
 // ## -- Background colors ------------------ ## //
 
 $footer-background-color: #353535;
@@ -31,6 +32,7 @@ $icon-button-style2-color: #7a7a7a;
 // ## -- shadow colors ------------------ ## //
 $shadow-color: rgba(0, 0, 0, 0.25);
 $shadow-color--dark: rgba(0, 0, 0, 0.35);
+
 // #############################################//
 
 // # - Fonts -------------------------------- # //
