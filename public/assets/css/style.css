@@ -66,10 +66,8 @@ body {
   font-weight: 300;
 }
 
-.card--new {
-  font-family: "Roboto", sans-serif;
-  font-size: 14px;
-  font-weight: 500;
+.card__like-icon {
+  font-size: 22px;
 }
 .card__title {
   font-family: "Roboto", sans-serif;
@@ -81,8 +79,10 @@ body {
   font-size: 17px;
   font-weight: 300;
 }
-.card__like-icon {
-  font-size: 1.375rem;
+.card--new {
+  font-family: "Roboto", sans-serif;
+  font-size: 14px;
+  font-weight: 500;
 }
 
 .button-style1,
@@ -358,31 +358,26 @@ body {
   padding: 0 25px 0 13px;
 }
 .card .fa-heart {
-  display: flex;
-  flex-direction: initial;
-  justify-content: center;
-  align-items: initial;
-  gap: initial;
-  width: 25px;
+  width: 26px;
   position: absolute;
   right: 23px;
   bottom: 32px;
 }
-.card .fas::before {
-  display: flex;
-  flex-direction: initial;
-  justify-content: center;
-  align-items: initial;
-  gap: initial;
-  width: 25px;
+.card .far {
+  text-align: center;
+  width: 26px;
+  color: inherit;
 }
 .card .fas {
+  text-align: center;
+  width: 26px;
   z-index: 1;
   opacity: 0;
-  transition: opacity 0.5s;
+  transition: opacity 0.25s;
 }
 .card .fas:hover, .card .fas:focus {
   opacity: 1;
+  cursor: pointer;
 }
 /* # Homepage*/
 /* ## section localisation  */

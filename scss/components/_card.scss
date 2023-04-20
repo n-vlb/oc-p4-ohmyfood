@@ -52,25 +52,29 @@
 
   //Like Heart icon animation
   .fa-heart {
-    @include flex($justify: center); //fix truncating icon;
-    width: 25px; //fix truncating icon;
+    width: 26px;
     position: absolute;
     right: 23px;
     bottom: 32px;
   }
-  //solid icon gradient
-  .fas::before {
-    @include flex($justify: center); //fix truncating icon;
-    width: 25px; //fix truncating icon;
+
+  .far {
+    text-align: center; //fix truncating
+    width: 26px; //fix truncating
+    color: inherit;
   }
+
   .fas {
+    text-align: center; //fix truncating
+    width: 26px; //fix truncating
+    @extend %heart-gradient;
     z-index: +1;
     opacity: 0;
-    transition: opacity 0.5s;
-    @extend %heart-gradient;
+    transition: opacity 0.25s;
     &:hover,
     &:focus {
       opacity: 1;
+      cursor: pointer;
     }
     &:hover + .far,
     &:focus + .far {
