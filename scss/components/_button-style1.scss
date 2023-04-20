@@ -30,7 +30,7 @@
       $gradient-secondary-color--light 123.93%
     );
 
-    box-shadow: 0px 4px 15px $shadow-color--dark; //agrandissement de l'ombre de 5px assombrie de 10%
+    box-shadow: 0px 4px 15px $shadow-color; //agrandissement de l'ombre de 5px assombrie de 10%
     z-index: -1; //fixe la position du layer sous le bouton
     opacity: 0; //fixe l'opacité de départ à invisible
     transition: opacity 0.5s; //la transition se fera sur l'opacité du pseudo element

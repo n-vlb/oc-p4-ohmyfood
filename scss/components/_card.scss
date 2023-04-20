@@ -8,14 +8,19 @@
   box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.1);
   transition: box-shadow, transform, 0.5s;
   &:hover {
-    box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.15);
+    box-shadow: 0px 4px 20px $shadow-color;
   }
 
-  //this class add badge "Nouveau" to the card and change shadow color.
+  //this class add badge "Nouveau" to the card and change shadow color on card and badge.
   &--new {
-    &:hover {
-      box-shadow: 1px 4px 20px rgba($badge-secondary-color, 0.15);
+    // &:hover,
+    &:hover::before {
+      box-shadow: 1px 4px 20px rgba($badge-secondary-color, 0.3);
     }
+    &:hover::before {
+      background-color: $badge-primary-color--light;
+    }
+
     &::before {
       content: "Nouveau";
       position: absolute;
@@ -29,6 +34,7 @@
       color: $badge-secondary-color;
       border-radius: 2px;
       box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.15);
+      transition: box-shadow, transform, 0.5s;
     }
   }
 
@@ -45,18 +51,20 @@
   }
 
   //Like Heart icon animation
+
   .fa-heart {
+    @include flex($justify: center); //fix truncating icon;
+    width: 23px; //fix truncating icon;
     position: absolute;
     right: 25px;
     bottom: 32px;
-    width: 23px;
-    text-align: center;
   }
+
   //solid icon gradient
   .fas {
     z-index: +1;
     opacity: 0;
-    transition: opacity 0.25s;
+    transition: opacity 0.5s;
     @extend %heart-gradient;
     &:hover,
     &:focus {

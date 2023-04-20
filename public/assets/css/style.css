@@ -228,7 +228,7 @@ body {
   width: 100%;
   content: "";
   background: linear-gradient(-3.33deg, #9b63df -11.44%, #ff88de 123.93%);
-  box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.35);
+  box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.25);
   z-index: -1;
   opacity: 0;
   transition: opacity 0.5s;
@@ -319,10 +319,13 @@ body {
   transition: box-shadow, transform, 0.5s;
 }
 .card:hover {
-  box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.15);
+  box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.25);
 }
-.card--new:hover {
-  box-shadow: 1px 4px 20px rgba(0, 135, 102, 0.15);
+.card--new:hover::before {
+  box-shadow: 1px 4px 20px rgba(0, 135, 102, 0.3);
+}
+.card--new:hover::before {
+  background-color: #a5e5d5;
 }
 .card--new::before {
   content: "Nouveau";
@@ -337,6 +340,7 @@ body {
   color: #008766;
   border-radius: 2px;
   box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.15);
+  transition: box-shadow, transform, 0.5s;
 }
 .card__picture {
   border-radius: 15px 15px 0 0;
@@ -354,16 +358,20 @@ body {
   padding: 0 25px 0 13px;
 }
 .card .fa-heart {
+  display: flex;
+  flex-direction: initial;
+  justify-content: center;
+  align-items: initial;
+  gap: initial;
+  width: 23px;
   position: absolute;
   right: 25px;
   bottom: 32px;
-  width: 23px;
-  text-align: center;
 }
 .card .fas {
   z-index: 1;
   opacity: 0;
-  transition: opacity 0.25s;
+  transition: opacity 0.5s;
 }
 .card .fas:hover, .card .fas:focus {
   opacity: 1;
@@ -470,6 +478,11 @@ body {
   width: 100%;
   max-width: 1080px;
 }
+@media (min-width: 768px) {
+  .restaurants__cards-container {
+    gap: 20px;
+  }
+}
 @media (min-width: 1024px) {
   .restaurants__cards-container {
     justify-content: space-between;
@@ -479,6 +492,11 @@ body {
 .restaurants__card-link {
   width: 100%;
   position: relative;
+}
+@media (min-width: 768px) {
+  .restaurants__card-link {
+    width: calc((100% - 20px) / 2);
+  }
 }
 @media (min-width: 1024px) {
   .restaurants__card-link {
