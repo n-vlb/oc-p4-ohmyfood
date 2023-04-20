@@ -25,7 +25,7 @@
     min-width: 315px;
   }
 }
-/* ## section guide --------- */ 
+/* ## section guide --------- */
 .guide {
   @include flex($direction: column, $gap: 26px);
   padding: 48px 20px 68px 20px;
@@ -57,14 +57,20 @@
     padding-top: 30px;
   }
 
+  &__title {
+    padding-left: 3px;
+    width: 100%;
+    max-width: 1080px;
+  }
+
   &__cards-container {
     @include flex(row, center, center, 18px);
     flex-wrap: wrap;
     width: 100%;
     max-width: 1080px;
-    @include for-size(tablet){
+    @include for-size(tablet) {
       // background:green;
-      gap:20px;
+      gap: 20px;
     }
     @include for-size(desktop) {
       justify-content: space-between;
@@ -76,18 +82,12 @@
   &__card-link {
     width: 100%;
     position: relative; // for badge "Nouveau" positionning
-    @include for-size(tablet){
-      width:calc((100% - 20px) /2 );
+    @include for-size(tablet) {
+      width: calc((100% - 20px) / 2);
     }
     @include for-size(desktop) {
-      width: calc((100% - 50px) /2);
+      width: calc((100% - 50px) / 2);
       max-width: 490px;
     }
-  }
-
-  &__title {
-    padding-left: 3px;
-    width: 100%;
-    max-width: 1080px 
   }
 }

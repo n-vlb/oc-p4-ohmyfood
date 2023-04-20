@@ -51,16 +51,18 @@
   }
 
   //Like Heart icon animation
-
   .fa-heart {
     @include flex($justify: center); //fix truncating icon;
-    width: 23px; //fix truncating icon;
+    width: 25px; //fix truncating icon;
     position: absolute;
-    right: 25px;
+    right: 23px;
     bottom: 32px;
   }
-
   //solid icon gradient
+  .fas::before {
+    @include flex($justify: center); //fix truncating icon;
+    width: 25px; //fix truncating icon;
+  }
   .fas {
     z-index: +1;
     opacity: 0;

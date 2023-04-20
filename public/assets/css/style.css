@@ -66,8 +66,10 @@ body {
   font-weight: 300;
 }
 
-.card__like-icon {
-  font-size: 1.375rem;
+.card--new {
+  font-family: "Roboto", sans-serif;
+  font-size: 14px;
+  font-weight: 500;
 }
 .card__title {
   font-family: "Roboto", sans-serif;
@@ -79,10 +81,8 @@ body {
   font-size: 17px;
   font-weight: 300;
 }
-.card--new {
-  font-family: "Roboto", sans-serif;
-  font-size: 14px;
-  font-weight: 500;
+.card__like-icon {
+  font-size: 1.375rem;
 }
 
 .button-style1,
@@ -363,10 +363,18 @@ body {
   justify-content: center;
   align-items: initial;
   gap: initial;
-  width: 23px;
+  width: 25px;
   position: absolute;
-  right: 25px;
+  right: 23px;
   bottom: 32px;
+}
+.card .fas::before {
+  display: flex;
+  flex-direction: initial;
+  justify-content: center;
+  align-items: initial;
+  gap: initial;
+  width: 25px;
 }
 .card .fas {
   z-index: 1;
@@ -468,6 +476,11 @@ body {
     padding-top: 30px;
   }
 }
+.restaurants__title {
+  padding-left: 3px;
+  width: 100%;
+  max-width: 1080px;
+}
 .restaurants__cards-container {
   display: flex;
   flex-direction: row;
@@ -503,9 +516,4 @@ body {
     width: calc((100% - 50px) / 2);
     max-width: 490px;
   }
-}
-.restaurants__title {
-  padding-left: 3px;
-  width: 100%;
-  max-width: 1080px;
 }
