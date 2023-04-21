@@ -105,15 +105,24 @@
                             <h3 class="card__title">Les délices des sens</h3>
                             <p class="card__subtitle">Folie-Méricourt</p>
                         </div>
-                        <!-- <i class="card__like-icon fas fa-heart fa-gradient"></i>
-                        <i class="card__like-icon far fa-heart"></i> -->
-                        <span class="fa-heart fas card__like-icon "></span>
-                        <span class="fa-heart far card__like-icon "></span>
+                        <!-- for testing purpose animate svg heart with gradient -->
+                        <svg class="heart-main" xmlns="http://www.w3.org/2000/svg">
+                            <path class="heart-path" />
+                        </svg>
+                        <svg class="heart-background" xmlns="http://www.w3.org/2000/svg">
+                            <defs>
+                                <linearGradient id="heart-gradient" x1="0" y1="0" x2="0%" y2="100%">
+                                    <stop offset="0" class="heart-gradient--start" />
+                                    <stop offset="100%" class="heart-gradient--stop" />
+                                </linearGradient>
+                            </defs>
+                            <path class="heart-path" />
+                        </svg>
+                        <!-- end test-->
                     </article>
                 </a>
                 <!-- end other cards -->
             </div>
-        </section>
     </main>
 
     <footer class="footer">

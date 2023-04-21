@@ -1,0 +1,44 @@
+//For testing purpose 
+/*Heart svg*/
+.heart-path {
+  d: path($heart-shape);//define svg shape
+}
+
+.heart-background {
+  overflow: visibility;//fix truncate
+  z-index: +1;//position on top
+  opacity: 0;//hide
+  position: absolute;
+  right:24px;
+  bottom:32px;
+  width: 23px;
+  height: 22px;
+  fill: url(#heart-gradient);//background
+  stroke: url(#heart-gradient);//border
+  stroke-width: 1px;//border-size
+  transition: opacity 1s;//animation
+  &:hover {
+    cursor: pointer;
+    opacity: 1;//show heart with gradient
+  }
+}
+
+.heart-main {
+  overflow: visibility;
+  position: absolute;
+  right:24px;
+  bottom:32px;
+  width: 23px;
+  height: 22px;
+  stroke-width: 1px;
+  stroke: black;
+  fill: white;
+}
+
+.heart-gradient--start {
+  stop-color: $gradient-primary-color;
+}
+
+.heart-gradient--stop {
+  stop-color: $gradient-secondary-color;
+}
