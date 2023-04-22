@@ -305,12 +305,8 @@ body {
 }
 
 /*Heart svg*/
-.heart-path {
-  d: path("M12.2206 2.40576L12.2208 2.40551C14.2226 0.15233 17.4035 -0.169451 19.5243 1.80187C22.0186 4.1243 22.156 8.32326 19.9123 10.8492L19.9122 10.8493L11.5978 20.2148C11.2596 20.5956 10.7372 20.5956 10.399 20.2148L2.0848 10.8495C-0.15494 8.32357 -0.0175439 4.1245 2.47664 1.80201C4.59762 -0.169649 7.78271 0.152585 9.77992 2.40514L9.78047 2.40576L10.627 3.35732L11.0005 3.77727L11.3741 3.35732L12.2206 2.40576Z");
-}
-
 .heart-background {
-  overflow: visibility;
+  overflow: visible;
   z-index: 1;
   opacity: 0;
   position: absolute;
@@ -321,15 +317,18 @@ body {
   fill: url(#heart-gradient);
   stroke: url(#heart-gradient);
   stroke-width: 1px;
-  transition: opacity 1s;
+  transition: opacity 0.5s;
 }
 .heart-background:hover {
   cursor: pointer;
   opacity: 1;
 }
+.heart-background:hover + .heart-main {
+  stroke: url(#heart-gradient);
+}
 
 .heart-main {
-  overflow: visibility;
+  overflow: visible;
   position: absolute;
   right: 24px;
   bottom: 32px;
@@ -417,7 +416,7 @@ body {
   width: 26px;
   z-index: 1;
   opacity: 0;
-  transition: opacity 0.25s;
+  transition: opacity 0.5s;
 }
 .card .fas:hover, .card .fas:focus {
   opacity: 1;

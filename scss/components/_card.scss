@@ -70,7 +70,7 @@
     @extend %heart-gradient;
     z-index: +1;
     opacity: 0;
-    transition: opacity 0.25s;
+    transition: opacity 0.5s;
     &:hover,
     &:focus {
       opacity: 1;

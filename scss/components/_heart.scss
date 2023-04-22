@@ -1,11 +1,11 @@
 //For testing purpose 
 /*Heart svg*/
-.heart-path {
-  d: path($heart-shape);//define svg shape
-}
+// .heart-path {
+//   d: path($heart-shape);//define svg shape
+// }
 
 .heart-background {
-  overflow: visibility;//fix truncate
+  overflow: visible;//fix truncate
   z-index: +1;//position on top
   opacity: 0;//hide
   position: absolute;
@@ -16,15 +16,18 @@
   fill: url(#heart-gradient);//background
   stroke: url(#heart-gradient);//border
   stroke-width: 1px;//border-size
-  transition: opacity 1s;//animation
+  transition: opacity .5s;//animation
   &:hover {
     cursor: pointer;
     opacity: 1;//show heart with gradient
   }
+  &:hover + .heart-main{
+    stroke: url(#heart-gradient);//border
+  }
 }
 
 .heart-main {
-  overflow: visibility;
+  overflow: visible;
   position: absolute;
   right:24px;
   bottom:32px;
