@@ -1,0 +1,62 @@
+.loader {
+  width: 100vw;
+  height: 100vh;
+  @include flex(column, center, center, 3rem);
+  position: absolute;
+  &__img {
+    width: 15rem;
+  }
+
+  &__dot {
+    width: 2rem;
+    height: 2rem;
+    border-radius: 100%; //perfect circle
+    display: inline-block;
+    animation: slide 1s infinite;
+  }
+}
+//this loop replace stuffs
+@for $i from 1 through 5 {
+  .loader__dot:nth-child(#{$i}) {
+    animation-delay: 100ms * $i;
+    background: map-get($loader-colors, $i);
+  }
+}
+//   &__dot:nth-child(1) {
+//     animation-delay: 0.1s;
+//     background: $loader-color1;
+//   }
+
+//   &__dot:nth-child(2) {
+//     animation-delay: 0.2s;
+//     background:$loader-color2;
+//   }
+
+//   &__dot:nth-child(3) {
+//     animation-delay: 0.3s;
+//     background: $loader-color3;
+//   }
+
+//   &__dot:nth-child(4) {
+//     animation-delay: 0.4s;
+//     background: $loader-color4;
+//   }
+
+//   &__dot:nth-child(5) {
+//     animation-delay: 0.5s;
+//     background: $loader-color5;
+//   }
+// }
+
+@keyframes slide {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    opacity: 0.3;
+    transform: scale(2);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
