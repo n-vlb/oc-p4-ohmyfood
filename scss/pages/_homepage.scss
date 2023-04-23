@@ -28,6 +28,7 @@
 /* ## section guide --------- */
 .guide {
   @include flex($direction: column, $gap: 26px);
+  background-color:white;
   padding: 48px 20px 68px 20px;
   @include for-size(desktop) {
     @include flex($direction: column, $align: center, $gap: 25px);

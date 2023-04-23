@@ -1,0 +1,68 @@
+.loader {
+  z-index: -1;
+  width: 100vw;
+  height: 100vh;
+  opacity: 1;
+  @include flex(column, center, center, 2rem);
+  background: white;
+  position: absolute;
+  animation: loading 2.98s ease-in-out;
+  &__img {
+    width: 15rem;
+  }
+  &__dot {
+    width: 2rem;
+    height: 2rem;
+    border-radius: 100%; //perfect circle
+    display: inline-block;
+    animation: slide 1s 3;
+  }
+  //   this loop replace repetitive lines of code
+  @for $i from 1 through 5 {
+    &__dot:nth-child(#{$i}) {
+      animation-delay: 100ms * $i;
+      background: map-get($loader-colors, $i);
+    }
+  }
+}
+
+@keyframes slide {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    opacity: 0.3;
+    transform: scale(2);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+@keyframes loading {
+  0% {
+    z-index: 5;
+  }
+  70%{
+    opacity:1;
+  }
+
+  71%{
+    transform:scale(1);
+  }
+  
+  81% {
+  opacity:0.019;
+  }
+
+  99%{
+    opacity:0.001;
+    transform:scale(5);
+    z-index:5;
+  }
+  100% {
+    transform:scale(5);
+    opacity:0;
+    z-index: -1;
+  }
+}
