@@ -1,14 +1,14 @@
-/*Google fonts*/
+/* # Google fonts ---------------------------- # */
 @import url("https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&family=Shrikhand&display=swap");
-/*Heart like gradient*/
-.card .fas:hover + .far, .card .fas:focus + .far, .card .fas {
+/* # - Heart like gradient ------------------- # */
+.fas:hover + .far, .fas:focus + .far, .fas:active + .far, .fas {
   background: linear-gradient(rgb(147, 86, 220), #ff79da);
   background-clip: text;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }
 
-/* global parameters*/
+/* # - global parameters --------------------- # */
 * {
   box-sizing: border-box;
   margin: 0;
@@ -16,6 +16,7 @@
 }
 
 body {
+  position: relative;
   width: 100%;
   margin: auto;
 }
@@ -51,7 +52,7 @@ address {
   font-style: inherit;
 }
 
-/*Typography*/
+/* # - Typography ---------------------------- # */
 body {
   font-family: "Roboto", sans-serif;
 }
@@ -98,6 +99,12 @@ body {
   font-family: "Roboto", sans-serif;
   font-size: 16px;
   font-weight: 500;
+}
+
+.button-style1:active {
+  font-family: "Roboto", sans-serif;
+  font-size: 16px;
+  font-weight: 700;
 }
 
 .footer__title {
@@ -261,7 +268,7 @@ body {
   }
 }
 
-/*Footer*/
+/* # - Footer -------------------------------- # */
 .footer {
   display: flex;
   flex-direction: column;
@@ -326,7 +333,7 @@ body {
   width: 130px;
 }
 
-/*Main button*/
+/* # - Button style 1 ------------------------ # */
 .button-style1 {
   display: flex;
   flex-direction: row;
@@ -362,7 +369,7 @@ body {
   width: 186px;
 }
 
-/*Secondary button*/
+/* # Button style 2 -------------------------- # */
 .guide__buttons-container {
   counter-reset: nbButton;
 }
@@ -416,65 +423,36 @@ body {
   box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.15);
   transition: box-shadow, border, background-color, 0.5s;
 }
-.button-style2__link:hover {
-  background-color: #fafafa;
-  box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.25);
+.button-style2__link:hover, .button-style2__link:focus, .button-style2__link:active {
+  background-color: #f7f7f7;
+  box-shadow: 0px 4px 20px rgba(121, 0, 88, 0.17);
 }
-.button-style2__link:hover .button-style2__icon {
+.button-style2__link:hover .button-style2__icon, .button-style2__link:focus .button-style2__icon, .button-style2__link:active .button-style2__icon {
   color: rgb(147, 86, 220);
 }
-.button-style2__link:active, .button-style2__link:focus {
-  box-shadow: 0px 4px 20px rgba(255, 121, 218, 0.17);
+.button-style2__link:active {
   border: 1px solid rgba(255, 121, 218, 0.1);
 }
-.button-style2__link:active .button-style2__icon, .button-style2__link:focus .button-style2__icon {
-  color: rgb(147, 86, 220);
+
+/* # - Heart icon animation ------------------ # */
+.far {
+  text-align: center;
+  width: 26px;
+  color: inherit;
 }
 
-/*Heart svg*/
-.heart-background {
-  overflow: visible;
+.fas {
+  text-align: center;
+  width: 26px;
   z-index: 1;
   opacity: 0;
-  position: absolute;
-  right: 24px;
-  bottom: 32px;
-  width: 23px;
-  height: 22px;
-  fill: url(#heart-gradient);
-  stroke: url(#heart-gradient);
-  stroke-width: 1px;
   transition: opacity 0.5s;
 }
-.heart-background:hover {
-  cursor: pointer;
+.fas:hover, .fas:focus, .fas:active {
   opacity: 1;
+  cursor: pointer;
 }
-.heart-background:hover + .heart-main {
-  stroke: url(#heart-gradient);
-}
-
-.heart-main {
-  overflow: visible;
-  position: absolute;
-  right: 24px;
-  bottom: 32px;
-  width: 23px;
-  height: 22px;
-  stroke-width: 1px;
-  stroke: black;
-  fill: white;
-}
-
-.heart-gradient--start {
-  stop-color: rgb(147, 86, 220);
-}
-
-.heart-gradient--stop {
-  stop-color: #ff79da;
-}
-
-/*Card restaurant*/
+/* # - Card restaurant ----------------------- # */
 .card {
   display: flex;
   flex-direction: column;
@@ -533,24 +511,9 @@ body {
   right: 23px;
   bottom: 32px;
 }
-.card .far {
-  text-align: center;
-  width: 26px;
-  color: inherit;
-}
-.card .fas {
-  text-align: center;
-  width: 26px;
-  z-index: 1;
-  opacity: 0;
-  transition: opacity 0.5s;
-}
-.card .fas:hover, .card .fas:focus {
-  opacity: 1;
-  cursor: pointer;
-}
-/* # Homepage*/
-/* ## section localisation  */
+
+/* # - Homepage ------------------------------ # */
+/* ## -- section localisation ---------------- ## */
 .localisation {
   display: flex;
   flex-direction: row;
@@ -561,7 +524,7 @@ body {
   height: 50px;
 }
 
-/* ## section reservation --- */
+/* ## -- section reservation ----------------- ## */
 .reservation {
   text-align: center;
   display: flex;
@@ -584,7 +547,7 @@ body {
   min-width: 315px;
 }
 
-/* ## section guide --------- */
+/* ## -- section guide ----------------------- ## */
 .guide {
   display: flex;
   flex-direction: column;
@@ -627,7 +590,7 @@ body {
   }
 }
 
-/* ## section restaurants --- */
+/* ## -- section restaurants ----------------- ## */
 .restaurants {
   display: flex;
   flex-direction: column;

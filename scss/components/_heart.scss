@@ -1,47 +1,28 @@
-//For testing purpose 
-/*Heart svg*/
-// .heart-path {
-//   d: path($heart-shape);//define svg shape
-// }
-
-.heart-background {
-  overflow: visible;//fix truncate
-  z-index: +1;//position on top
-  opacity: 0;//hide
-  position: absolute;
-  right:24px;
-  bottom:32px;
-  width: 23px;
-  height: 22px;
-  fill: url(#heart-gradient);//background
-  stroke: url(#heart-gradient);//border
-  stroke-width: 1px;//border-size
-  transition: opacity .5s;//animation
-  &:hover {
+/* # - Heart icon animation ------------------ # */
+// empty heart
+.far {
+  text-align: center; //fix truncating
+  width: 26px; //fix truncating
+  color: inherit;
+}
+// gradient heart
+.fas {
+  text-align: center; //fix truncating
+  width: 26px; //fix truncating
+  @extend %heart-gradient;
+  z-index: +1;
+  opacity: 0;
+  transition: opacity 0.5s;
+  &:hover,
+  &:focus,
+  &:active {
+    opacity: 1;
     cursor: pointer;
-    opacity: 1;//show heart with gradient
   }
-  &:hover + .heart-main{
-    stroke: url(#heart-gradient);//border
+  &:hover + .far,
+  &:focus + .far,
+  &:active + .far {
+    @extend %heart-gradient;
   }
 }
 
-.heart-main {
-  overflow: visible;
-  position: absolute;
-  right:24px;
-  bottom:32px;
-  width: 23px;
-  height: 22px;
-  stroke-width: 1px;
-  stroke: black;
-  fill: white;
-}
-
-.heart-gradient--start {
-  stop-color: $gradient-primary-color;
-}
-
-.heart-gradient--stop {
-  stop-color: $gradient-secondary-color;
-}

@@ -1,4 +1,4 @@
-/*Card restaurant*/
+/* # - Card restaurant ----------------------- # */
 .card {
   @include flex($direction: column, $gap: 16px);
   width: 100%;
@@ -50,35 +50,10 @@
     padding: 0 25px 0 13px;
   }
 
-  //Like Heart icon animation
   .fa-heart {
     width: 26px;
     position: absolute;
     right: 23px;
     bottom: 32px;
-  }
-
-  .far {
-    text-align: center; //fix truncating
-    width: 26px; //fix truncating
-    color: inherit;
-  }
-
-  .fas {
-    text-align: center; //fix truncating
-    width: 26px; //fix truncating
-    @extend %heart-gradient;
-    z-index: +1;
-    opacity: 0;
-    transition: opacity 0.5s;
-    &:hover,
-    &:focus {
-      opacity: 1;
-      cursor: pointer;
-    }
-    &:hover + .far,
-    &:focus + .far {
-      @extend %heart-gradient;
-    }
   }
 }

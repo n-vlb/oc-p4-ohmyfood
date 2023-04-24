@@ -1,4 +1,4 @@
-/*Typography*/
+/* # - Typography ---------------------------- # */
 //global
 body {
   font-family: $main-font;
@@ -41,6 +41,9 @@ body {
 .button-style1,
 .button-style2 {
   @include typography($weight: $semi-bold);
+}
+.button-style1:active{
+  @include typography($weight: $bold);
 }
 
 //footer

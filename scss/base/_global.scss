@@ -1,4 +1,4 @@
-/* global parameters*/
+/* # - global parameters --------------------- # */
 * {
   box-sizing: border-box;
   margin: 0;
@@ -7,6 +7,7 @@
 }
 
 body {
+  position:relative;
   width: 100%;
   margin: auto;
 }
