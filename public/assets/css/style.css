@@ -123,17 +123,49 @@ body {
   gap: 2rem;
   background: white;
   position: absolute;
-  animation: loading 2.98s;
+  animation: loading 3s;
+}
+@media (min-width: 768px) {
+  .loader {
+    gap: 3rem;
+  }
+}
+@media (min-width: 1024px) {
+  .loader {
+    gap: 4rem;
+  }
 }
 .loader__img {
   width: 15rem;
 }
+@media (min-width: 768px) {
+  .loader__img {
+    width: 22.5rem;
+  }
+}
+@media (min-width: 1024px) {
+  .loader__img {
+    width: 30rem;
+  }
+}
 .loader__dot {
-  width: 2rem;
-  height: 2rem;
+  width: 1.6rem;
+  height: 1.6rem;
   border-radius: 100%;
   display: inline-block;
   animation: slide 1s 3;
+}
+@media (min-width: 768px) {
+  .loader__dot {
+    width: 2.4rem;
+    height: 2.4rem;
+  }
+}
+@media (min-width: 1024px) {
+  .loader__dot {
+    width: 3.2rem;
+    height: 3.2rem;
+  }
 }
 .loader__dot:nth-child(1) {
   animation-delay: 100ms;

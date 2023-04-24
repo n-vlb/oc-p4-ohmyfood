@@ -6,16 +6,36 @@
   @include flex(column, center, center, 2rem);
   background: white;
   position: absolute;
-  animation: loading 2.98s ;
+  animation: loading 3s ;
+  @include for-size(tablet){
+    gap:3rem;
+  }
+  @include for-size(desktop){
+    gap:4rem;
+  }
   &__img {
     width: 15rem;
+    @include for-size(tablet){
+      width:22.5rem;
+    }
+    @include for-size(desktop){
+      width:30rem;
+    }
   }
   &__dot {
-    width: 2rem;
-    height: 2rem;
+    width: 1.6rem;
+    height: 1.6rem;
     border-radius: 100%; //perfect circle
     display: inline-block;
     animation: slide 1s 3;
+    @include for-size(tablet){
+      width:2.4rem;
+      height:2.4rem;
+    }
+    @include for-size(desktop){
+      width:3.2rem;
+      height:3.2rem;
+    }
   }
   //   this loop replace repetitive lines of code
   @for $i from 1 through 5 {
