@@ -47,6 +47,10 @@ input {
   outline: none;
 }
 
+address {
+  font-style: inherit;
+}
+
 /*Typography*/
 body {
   font-family: "Roboto", sans-serif;
