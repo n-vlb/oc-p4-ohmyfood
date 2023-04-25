@@ -9,7 +9,7 @@ body {
   @include typography($family: $title-font, $size: 30px);
 }
 
-//main
+//main homepage
 .localisation {
   @include typography($weight: $semi-bold);
 }
@@ -45,7 +45,10 @@ body {
 .button-style1:active{
   @include typography($weight: $bold);
 }
-
+//main restaurant
+.menu__title{
+  @include typography($family: $title-font, $size: 28px);
+}
 //footer
 .footer {
   &__title {

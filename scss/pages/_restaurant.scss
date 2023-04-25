@@ -1,0 +1,19 @@
+.menu {
+  // width: 100%;
+  padding: 32px 5px; //important for 320px screen
+  @include flex(row, center, center, 0);
+  &__heart-container {
+    width: 25px; //give space for child heart
+  }
+  &__headline {
+    @include flex($direction: row, $justify: space-between);
+    width: 100%;
+    max-width: 341px;
+    // insert heart icon
+    .fa-heart {
+      width: 26px;
+      position: absolute; //supperposion heart for animation
+      line-height: 41px; // center vertically
+    }
+  }
+}

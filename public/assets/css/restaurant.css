@@ -1,0 +1,9 @@
+.menu__headline {
+  flex: 1;
+  width: 100%;
+  position: relative;
+}
+.menu__headline .fa-heart {
+  width: 26px;
+  position: absolute;
+}

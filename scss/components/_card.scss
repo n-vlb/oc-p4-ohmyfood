@@ -49,7 +49,7 @@
     @include flex($direction: column, $gap: 5px);
     padding: 0 25px 0 13px;
   }
-
+  //insert heart icon
   .fa-heart {
     width: 26px;
     position: absolute;
@@ -57,3 +57,4 @@
     bottom: 32px;
   }
 }
+

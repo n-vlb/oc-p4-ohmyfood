@@ -108,6 +108,12 @@ body {
   font-weight: 700;
 }
 
+.menu__title {
+  font-family: "Shrikhand", cursive;
+  font-size: 28px;
+  font-weight: 400;
+}
+
 .footer__title {
   font-family: "Shrikhand", cursive;
   font-size: 18px;
@@ -687,4 +693,30 @@ body {
     width: calc((100% - 50px) / 2);
     max-width: 490px;
   }
+}
+
+.menu {
+  padding: 32px 5px;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  gap: 0;
+}
+.menu__heart-container {
+  width: 25px;
+}
+.menu__headline {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: initial;
+  gap: initial;
+  width: 100%;
+  max-width: 341px;
+}
+.menu__headline .fa-heart {
+  width: 26px;
+  position: absolute;
+  line-height: 41px;
 }
