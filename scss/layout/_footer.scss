@@ -1,41 +1,56 @@
-/* # - Footer -------------------------------- # */
+// /* # - Footer -------------------------------- # */
+
+footer {
+  @include for-size(large-desktop) {
+    @include flex($justify: center);
+  }
+}
 
 .footer {
   @include flex($direction: column, $gap: 16px);
-  color: $footer-font-color;
-  background-color: $footer-background-color;
+  width: 100%;
   padding: 22px 25px;
+  max-width: 1440px; 
+  color: $footer-font-color;
+  
 
-  @include for-size(desktop) {
-    @include flex(row-reverse, initial, flex-end, 16px);
-    padding: 30px 25px;
+  @include for-size(tablet) {
+    @include flex(row-reverse, initial, flex-end, 0);
     height: 114px;
+    padding: 30px 17.5px;
+    address .footer__link {
+      width: 100px; 
+    }
   }
 
-  &__list {
-    @include flex($direction: column, $gap: 7px);
-
-    @include for-size(tablet) {
-      @include flex($direction: row, $gap: 7px);
-    }
-
-    @include for-size(desktop) {
-      @include flex(row, initial, flex-end, 7px);
+  @include for-size(desktop) {
+    gap: 16px;
+    padding: 30px 25px;
+    address .footer__link {
+      width: 130px;
     }
   }
 
   &__title {
     height: 27px;
-    width: 139px;
+    @include for-size(tablet) {
+      width: 16%;
+      max-width: 139px;
+    }
+  }
+
+  &__list {
+    @include flex($direction: column, $gap: 7px);
+    @include for-size(tablet) {
+      @include flex(row, flex-end, flex-end, 7px);
+    }
   }
 
   &__link {
     @include flex($align: center, $gap: 10px);
     height: 19px;
     width: 190px;
-
     &--alt-size {
-      height: 20px;
       width: 130px;
     }
   }
