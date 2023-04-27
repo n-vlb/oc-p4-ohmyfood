@@ -8,3 +8,11 @@
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }
+
+/* # - short-text ------------------- # */
+
+%short-text{
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}

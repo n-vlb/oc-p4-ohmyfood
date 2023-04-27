@@ -1,11 +1,22 @@
 /* # Google fonts ---------------------------- # */
 @import url("https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&family=Shrikhand&display=swap");
 /* # - Heart like gradient ------------------- # */
-.fas:hover + .far, .fas:focus + .far, .fas:active + .far, .fas {
+.restaurant__headline .fas:hover + .far, .restaurant__headline .fas:focus + .far, .restaurant__headline .fas:active + .far,
+.card .fas:hover + .far,
+.card .fas:focus + .far,
+.card .fas:active + .far, .restaurant__headline .fas,
+.card .fas {
   background: linear-gradient(rgb(147, 86, 220), #ff79da);
   background-clip: text;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
+}
+
+/* # - short-text ------------------- # */
+.menu .submenu__choice-description, .menu .submenu__choice-title {
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
 }
 
 /* # - global parameters --------------------- # */
@@ -23,6 +34,12 @@ body {
 
 header {
   background: white;
+}
+
+main {
+  z-index: 0;
+  background: white;
+  margin: auto;
 }
 
 footer {
@@ -108,10 +125,37 @@ body {
   font-weight: 700;
 }
 
-.menu__title {
+.restaurant__title {
   font-family: "Shrikhand", cursive;
   font-size: 28px;
   font-weight: 400;
+}
+.restaurant .submenu__title {
+  font-family: "Roboto", sans-serif;
+  font-size: 16px;
+  font-weight: 300;
+  text-transform: uppercase;
+}
+.restaurant .submenu__title__title {
+  font-family: "Shrikhand", cursive;
+  font-size: 28px;
+  font-weight: 400;
+}
+.restaurant .submenu__choice-title {
+  font-family: "Roboto", sans-serif;
+  font-size: 18px;
+  font-weight: 500;
+  color: red;
+}
+.restaurant .submenu__choice-description {
+  font-family: "Roboto", sans-serif;
+  font-size: 15px;
+  font-weight: 300;
+}
+.restaurant .submenu__choice-description--price {
+  font-family: "Roboto", sans-serif;
+  font-size: 16px;
+  font-weight: 700;
 }
 
 .footer__title {
@@ -483,20 +527,24 @@ body {
 }
 
 /* # - Heart icon animation ------------------ # */
-.far {
+.restaurant__headline .far,
+.card .far {
   text-align: center;
   width: 26px;
   color: inherit;
 }
-
-.fas {
+.restaurant__headline .fas,
+.card .fas {
   text-align: center;
   width: 26px;
   z-index: 1;
   opacity: 0;
   transition: opacity 0.5s;
 }
-.fas:hover, .fas:focus, .fas:active {
+.restaurant__headline .fas:hover, .restaurant__headline .fas:focus, .restaurant__headline .fas:active,
+.card .fas:hover,
+.card .fas:focus,
+.card .fas:active {
   opacity: 1;
   cursor: pointer;
 }
@@ -695,30 +743,136 @@ body {
   }
 }
 
-.menu {
-  border-radius: 40px 40px 0 0;
-  background-color: #f6f6f6;
+.restaurant-picture {
+  -o-object-fit: cover;
+     object-fit: cover;
+  height: 275px;
+  width: 100%;
+  margin-bottom: -40px;
+  z-index: 0;
+}
+
+.restaurant {
   padding: 32px 5px;
+  margin: auto;
+  max-width: 1055px;
   display: flex;
-  flex-direction: row;
-  justify-content: center;
+  flex-direction: column;
+  justify-content: initial;
   align-items: center;
-  gap: 0;
+  gap: 40px;
+  z-index: 1;
+  background-color: #f6f6f6;
+  position: relative;
+  border-radius: 40px;
 }
-.menu__heart-container {
-  width: 25px;
-}
-.menu__headline {
+.restaurant__headline {
+  width: 100%;
+  max-width: 341px;
   display: flex;
-  flex-direction: row;
+  flex-direction: initial;
   justify-content: space-between;
   align-items: initial;
   gap: initial;
-  width: 100%;
-  max-width: 341px;
 }
-.menu__headline .fa-heart {
-  width: 26px;
-  position: absolute;
+.restaurant__headline .heart-container {
+  width: 25px;
+}
+.restaurant__headline .fa-heart {
   line-height: 41px;
+  position: absolute;
+}
+
+.menu {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: initial;
+  align-items: initial;
+  gap: 40px;
+}
+.menu .submenu {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: initial;
+  align-items: initial;
+  gap: 12px;
+}
+.menu .submenu__list {
+  display: flex;
+  flex-direction: column;
+  justify-content: initial;
+  align-items: initial;
+  gap: 12px;
+}
+.menu .submenu__choice {
+  display: flex;
+  flex-direction: initial;
+  justify-content: space-between;
+  align-items: initial;
+  gap: initial;
+  background-color: white;
+  width: 100%;
+  height: 69px;
+  position: relative;
+}
+.menu .submenu__choice .submenu__selection,
+.menu .submenu__choice .submenu__choice-description--price {
+  transition: transform 1s;
+}
+.menu .submenu__choice .fa-check-circle {
+  transition: transform 1s;
+}
+.menu .submenu__choice:hover .submenu__selection {
+  z-index: 1;
+  transform: translateX(0px);
+  opacity: 1;
+}
+.menu .submenu__choice:hover .fa-check-circle {
+  transform: rotate(-360deg);
+}
+.menu .submenu__choice:hover .submenu__choice-description--price {
+  transform: translateX(-55px);
+  padding-left: 55px;
+}
+.menu .submenu__content {
+  width: 100%;
+}
+.menu .submenu__lastline {
+  width: 100%;
+  display: flex;
+  flex-direction: initial;
+  justify-content: initial;
+  align-items: initial;
+  gap: initial;
+}
+.menu .submenu__choice-description--price {
+  padding-right: 0;
+  transform: translateX(0);
+  margin-left: auto;
+}
+.menu .submenu__selection {
+  background: #99e2d0;
+  border-radius: 0 15px 15px 0;
+  width: 50px;
+  height: 69px;
+  display: flex;
+  flex-direction: initial;
+  justify-content: center;
+  align-items: center;
+  gap: initial;
+  position: absolute;
+  opacity: 0;
+  right: 0;
+  transform: translateX(55px);
+}
+.menu .submenu__selection .fa-check-circle {
+  color: white;
+  margin: auto;
+  width: 32px;
+  height: 32px;
+  text-align: center;
+  transform: rotate(0deg);
+  transform-origin: 16px 14.6px;
 }

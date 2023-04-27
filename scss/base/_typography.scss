@@ -32,7 +32,7 @@ body {
   &__subtitle {
     @include typography($size: 17px, $weight: $thin);
   }
-  
+
   &--new {
     @include typography($size: 14px, $weight: $semi-bold);
   }
@@ -42,13 +42,38 @@ body {
 .button-style2 {
   @include typography($weight: $semi-bold);
 }
-.button-style1:active{
+.button-style1:active {
   @include typography($weight: $bold);
 }
-//main restaurant
-.menu__title{
-  @include typography($family: $title-font, $size: 28px);
+//restaurant
+.restaurant {
+  &__title {
+    @include typography($family: $title-font, $size: 28px);
+  }
+  .submenu {
+    &__title {
+      @include typography($weight: $thin);
+      text-transform: uppercase;
+      &__title {
+        @include typography($family: $title-font, $size: 28px);
+      }
+    }
+    &__choice-title {
+      @include typography($size: 18px, $weight: $semi-bold);
+     
+      color: red;
+    }
+    &__choice-description {
+      @include typography($size: 15px, $weight: $thin);
+     
+      &--price {
+        @include typography($weight: $bold);
+       
+      }
+    }
+  }
 }
+
 //footer
 .footer {
   &__title {
