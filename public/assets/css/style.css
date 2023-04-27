@@ -13,7 +13,7 @@
 }
 
 /* # - short-text ------------------- # */
-.menu .submenu__choice-description, .menu .submenu__choice-title {
+.restaurant .submenu__description, .restaurant .submenu__title {
   overflow: hidden;
   white-space: nowrap;
   text-overflow: ellipsis;
@@ -130,29 +130,28 @@ body {
   font-size: 28px;
   font-weight: 400;
 }
-.restaurant .submenu__title {
+.restaurant .menu__title {
   font-family: "Roboto", sans-serif;
   font-size: 16px;
   font-weight: 300;
   text-transform: uppercase;
 }
-.restaurant .submenu__title__title {
+.restaurant .menu__title__title {
   font-family: "Shrikhand", cursive;
   font-size: 28px;
   font-weight: 400;
 }
-.restaurant .submenu__choice-title {
+.restaurant .submenu__title {
   font-family: "Roboto", sans-serif;
   font-size: 18px;
   font-weight: 500;
-  color: red;
 }
-.restaurant .submenu__choice-description {
+.restaurant .submenu__description {
   font-family: "Roboto", sans-serif;
   font-size: 15px;
   font-weight: 300;
 }
-.restaurant .submenu__choice-description--price {
+.restaurant .submenu__price {
   font-family: "Roboto", sans-serif;
   font-size: 16px;
   font-weight: 700;
@@ -743,7 +742,21 @@ body {
   }
 }
 
-.restaurant-picture {
+.restaurant {
+  display: flex;
+  flex-direction: column;
+  justify-content: initial;
+  align-items: center;
+  gap: 40px;
+  margin: 0 auto;
+  padding-top: 40px;
+  max-width: 1055px;
+  background-color: #f6f6f6;
+  border-radius: 40px 40px 0 0;
+  z-index: 1;
+  position: relative;
+}
+.restaurant__picture {
   -o-object-fit: cover;
      object-fit: cover;
   height: 275px;
@@ -751,128 +764,100 @@ body {
   margin-bottom: -40px;
   z-index: 0;
 }
-
-.restaurant {
-  padding: 32px 5px;
-  margin: auto;
-  max-width: 1055px;
+.restaurant .menu {
+  width: 100%;
+}
+.restaurant .menu__title:after {
+  margin-bottom: 12px;
+  content: "";
+  display: block;
+  height: 3px;
+  width: 40px;
+  margin-top: 5px;
+  background-color: #99e2d0;
+}
+.restaurant .submenu {
   display: flex;
   flex-direction: column;
   justify-content: initial;
-  align-items: center;
-  gap: 40px;
-  z-index: 1;
-  background-color: #f6f6f6;
+  align-items: initial;
+  gap: 12px;
+}
+.restaurant .submenu__item {
+  display: flex;
+  flex-direction: column;
+  justify-content: initial;
+  align-items: initial;
+  gap: 5px;
   position: relative;
-  border-radius: 40px;
-}
-.restaurant__headline {
-  width: 100%;
-  max-width: 341px;
-  display: flex;
-  flex-direction: initial;
-  justify-content: space-between;
-  align-items: initial;
-  gap: initial;
-}
-.restaurant__headline .heart-container {
-  width: 25px;
-}
-.restaurant__headline .fa-heart {
-  line-height: 41px;
-  position: absolute;
-}
-
-.menu {
-  width: 100%;
-  display: flex;
-  flex-direction: column;
-  justify-content: initial;
-  align-items: initial;
-  gap: 40px;
-}
-.menu .submenu {
-  width: 100%;
-  display: flex;
-  flex-direction: column;
-  justify-content: initial;
-  align-items: initial;
-  gap: 12px;
-}
-.menu .submenu__list {
-  display: flex;
-  flex-direction: column;
-  justify-content: initial;
-  align-items: initial;
-  gap: 12px;
-}
-.menu .submenu__choice {
-  display: flex;
-  flex-direction: initial;
-  justify-content: space-between;
-  align-items: initial;
-  gap: initial;
+  height: 69px;
+  padding-left: 15px;
   background-color: white;
-  width: 100%;
+  border-radius: 15px;
+  overflow: hidden;
+}
+.restaurant .submenu__item:hover {
+  cursor: pointer;
+}
+.restaurant .submenu__item:hover::before {
+  color: white;
+  transform: rotate(0deg);
+  margin-right: 0;
+}
+.restaurant .submenu__item:hover::after {
+  margin-right: 0;
+}
+.restaurant .submenu__item:hover .submenu__price,
+.restaurant .submenu__item:hover .submenu__title {
+  padding-right: 65px;
+}
+.restaurant .submenu__item::after {
+  content: "";
+  position: absolute;
+  right: 0;
+  margin-right: -59px;
+  border-radius: 0 15px 15px 0;
+  background-color: #99e2d0;
+  font-family: fontAwesome;
   height: 69px;
-  position: relative;
+  line-height: 69px;
+  width: 59px;
+  text-align: center;
+  transition: all 0.5s;
+  z-index: 0;
 }
-.menu .submenu__choice .submenu__selection,
-.menu .submenu__choice .submenu__choice-description--price {
-  transition: transform 1s;
-}
-.menu .submenu__choice .fa-check-circle {
-  transition: transform 1s;
-}
-.menu .submenu__choice:hover .submenu__selection {
+.restaurant .submenu__item::before {
+  content: "\f058";
+  position: absolute;
+  right: 0px;
+  color: white;
+  margin-right: -59px;
+  display: inline-block;
+  font-size: 20px;
+  font-family: fontAwesome;
+  height: 69px;
+  line-height: 69px;
+  width: 59px;
+  text-align: center;
+  transform: rotate(180deg);
+  transition: all 0.5s;
   z-index: 1;
-  transform: translateX(0px);
-  opacity: 1;
 }
-.menu .submenu__choice:hover .fa-check-circle {
-  transform: rotate(-360deg);
+.restaurant .submenu__title {
+  padding-top: 12px;
 }
-.menu .submenu__choice:hover .submenu__choice-description--price {
-  transform: translateX(-55px);
-  padding-left: 55px;
-}
-.menu .submenu__content {
-  width: 100%;
-}
-.menu .submenu__lastline {
-  width: 100%;
+.restaurant .submenu__description-container {
   display: flex;
   flex-direction: initial;
   justify-content: initial;
   align-items: initial;
   gap: initial;
+  padding-bottom: 13.5px;
 }
-.menu .submenu__choice-description--price {
-  padding-right: 0;
-  transform: translateX(0);
-  margin-left: auto;
+.restaurant .submenu__description {
+  color: red;
 }
-.menu .submenu__selection {
-  background: #99e2d0;
-  border-radius: 0 15px 15px 0;
-  width: 50px;
-  height: 69px;
-  display: flex;
-  flex-direction: initial;
-  justify-content: center;
-  align-items: center;
-  gap: initial;
-  position: absolute;
-  opacity: 0;
-  right: 0;
-  transform: translateX(55px);
-}
-.menu .submenu__selection .fa-check-circle {
-  color: white;
-  margin: auto;
-  width: 32px;
-  height: 32px;
-  text-align: center;
-  transform: rotate(0deg);
-  transform-origin: 16px 14.6px;
+.restaurant .submenu__price {
+  padding-right: 15px;
+  transition: all 0.5s;
 }

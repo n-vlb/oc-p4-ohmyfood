@@ -50,7 +50,7 @@ body {
   &__title {
     @include typography($family: $title-font, $size: 28px);
   }
-  .submenu {
+  .menu {
     &__title {
       @include typography($weight: $thin);
       text-transform: uppercase;
@@ -58,18 +58,17 @@ body {
         @include typography($family: $title-font, $size: 28px);
       }
     }
-    &__choice-title {
+  }
+  .submenu {
+    &__title {
       @include typography($size: 18px, $weight: $semi-bold);
-     
-      color: red;
     }
-    &__choice-description {
+    &__description {
       @include typography($size: 15px, $weight: $thin);
+    }
+    &__price {
+      @include typography($weight: $bold);
      
-      &--price {
-        @include typography($weight: $bold);
-       
-      }
     }
   }
 }
