@@ -32,6 +32,7 @@ footer {
 
   &__title {
     height: 27px;
+    transition:all .25s;
     &:hover {
       color: lightgray;
     }
@@ -52,6 +53,7 @@ footer {
     @include flex($align: center, $gap: 10px);
     height: 19px;
     width: 190px;
+    transition:all .25s;
     &:hover {
       color: lightgray;
     }

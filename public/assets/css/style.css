@@ -390,6 +390,7 @@ body {
 }
 .footer__title {
   height: 27px;
+  transition: all 0.25s;
 }
 .footer__title:hover {
   color: lightgray;
@@ -424,6 +425,7 @@ body {
   gap: 10px;
   height: 19px;
   width: 190px;
+  transition: all 0.25s;
 }
 .footer__link:hover {
   color: lightgray;
