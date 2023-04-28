@@ -1,7 +1,13 @@
 .restaurant {
-  @include flex($direction: column, $align: center, $gap: 40px);
+  @include flex(
+    $direction: column,
+    $align: center,
+    $gap: 40px
+  ); //$align: center,
   margin: 0 auto;
   padding-top: 40px;
+  // padding-right:5px;
+  // padding-left:5px;
   max-width: 1055px;
   background-color: $menu-background-color;
   border-radius: 40px 40px 0 0;
@@ -16,16 +22,38 @@
     z-index: 0;
     // opacity:20%;
   }
-
+  &__title-container {
+    width: 100%;
+    padding-left: 10px;
+    padding-right: 10px;
+    max-width: calc(341px + 34px);
+    display: flex;
+    align-self: center;
+    position: relative;
+  }
+  &__title {
+    display: inline-block;
+  }
+  &__like-icon {
+    margin-right: 12px;
+    line-height: 40px;
+    font-size: 22px;
+    display: inline-block;
+    position: absolute;
+    right: 0px;
+  }
   .menu {
-    width:100%;
+    padding-right: 17px;
+    padding-left: 17px;
+    width: 100%;
     &__title:after {
       margin-bottom: 12px;
+      margin-top: 5px;
       content: "";
       display: block;
       height: 3px;
       width: 40px;
-      margin-top: 5px;
+
       background-color: $badge-primary-color;
     }
   }
@@ -51,57 +79,57 @@
         }
         .submenu__price,
         .submenu__title {
-          padding-right: 65px;
+          padding-right: 75px;
         }
       }
-      &::after {
-        content: "";
-        position: absolute;
-        right: 0;
-        margin-right: -59px;
-        border-radius: 0 15px 15px 0;
-        background-color: $badge-primary-color;
-        font-family: fontAwesome;
-        height: 69px;
-        line-height: 69px;
-        width: 59px;
-        text-align: center;
-        transition: all 0.5s;
-        z-index: 0;
-      }
       &::before {
+        font-family: fontAwesome;
         content: "\f058";
         position: absolute;
         right: 0px;
-        color: white;
+
         margin-right: -59px;
-        display: inline-block;
+        // display: inline-block;
         font-size: 20px;
-        font-family: fontAwesome;
+
         height: 69px;
         line-height: 69px;
         width: 59px;
         text-align: center;
         transform: rotate(180deg);
-        transition: all 0.5s;
+
+        color: white;
         z-index: 1;
+        transition: all 0.5s ease-in-out;
+      }
+      &::after {
+        content: "";
+        position: absolute;
+        right: 0;
+        height: 69px;
+        width: 59px;
+        margin-right: -59px;
+        border-radius: 0 15px 15px 0;
+        background-color: $badge-primary-color;
+        z-index: 0;
+        transition: all 0.5s ease-in-out;
       }
     }
     &__title {
       @extend %short-text;
       padding-top: 12px;
+      transition: all 0.5s ease-in-out;
     }
     &__description-container {
-      @include flex;
+      @include flex($justify: space-between);
       padding-bottom: 13.5px;
     }
     &__description {
       @extend %short-text;
-      color: red;
     }
     &__price {
       padding-right: 15px;
-      transition: all 0.5s;
+      transition: all 0.5s ease-in-out;
     }
   }
 }

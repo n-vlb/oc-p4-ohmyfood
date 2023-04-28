@@ -1,10 +1,10 @@
 /* # Google fonts ---------------------------- # */
 @import url("https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&family=Shrikhand&display=swap");
 /* # - Heart like gradient ------------------- # */
-.restaurant__headline .fas:hover + .far, .restaurant__headline .fas:focus + .far, .restaurant__headline .fas:active + .far,
+.restaurant .fas:hover + .far, .restaurant .fas:focus + .far, .restaurant .fas:active + .far,
 .card .fas:hover + .far,
 .card .fas:focus + .far,
-.card .fas:active + .far, .restaurant__headline .fas,
+.card .fas:active + .far, .restaurant .fas,
 .card .fas {
   background: linear-gradient(rgb(147, 86, 220), #ff79da);
   background-clip: text;
@@ -526,13 +526,13 @@ body {
 }
 
 /* # - Heart icon animation ------------------ # */
-.restaurant__headline .far,
+.restaurant .far,
 .card .far {
   text-align: center;
   width: 26px;
   color: inherit;
 }
-.restaurant__headline .fas,
+.restaurant .fas,
 .card .fas {
   text-align: center;
   width: 26px;
@@ -540,7 +540,7 @@ body {
   opacity: 0;
   transition: opacity 0.5s;
 }
-.restaurant__headline .fas:hover, .restaurant__headline .fas:focus, .restaurant__headline .fas:active,
+.restaurant .fas:hover, .restaurant .fas:focus, .restaurant .fas:active,
 .card .fas:hover,
 .card .fas:focus,
 .card .fas:active {
@@ -764,16 +764,38 @@ body {
   margin-bottom: -40px;
   z-index: 0;
 }
+.restaurant__title-container {
+  width: 100%;
+  padding-left: 10px;
+  padding-right: 10px;
+  max-width: 375px;
+  display: flex;
+  align-self: center;
+  position: relative;
+}
+.restaurant__title {
+  display: inline-block;
+}
+.restaurant__like-icon {
+  margin-right: 12px;
+  line-height: 40px;
+  font-size: 22px;
+  display: inline-block;
+  position: absolute;
+  right: 0px;
+}
 .restaurant .menu {
+  padding-right: 17px;
+  padding-left: 17px;
   width: 100%;
 }
 .restaurant .menu__title:after {
   margin-bottom: 12px;
+  margin-top: 5px;
   content: "";
   display: block;
   height: 3px;
   width: 40px;
-  margin-top: 5px;
   background-color: #99e2d0;
 }
 .restaurant .submenu {
@@ -809,55 +831,49 @@ body {
 }
 .restaurant .submenu__item:hover .submenu__price,
 .restaurant .submenu__item:hover .submenu__title {
-  padding-right: 65px;
-}
-.restaurant .submenu__item::after {
-  content: "";
-  position: absolute;
-  right: 0;
-  margin-right: -59px;
-  border-radius: 0 15px 15px 0;
-  background-color: #99e2d0;
-  font-family: fontAwesome;
-  height: 69px;
-  line-height: 69px;
-  width: 59px;
-  text-align: center;
-  transition: all 0.5s;
-  z-index: 0;
+  padding-right: 75px;
 }
 .restaurant .submenu__item::before {
+  font-family: fontAwesome;
   content: "\f058";
   position: absolute;
   right: 0px;
-  color: white;
   margin-right: -59px;
-  display: inline-block;
   font-size: 20px;
-  font-family: fontAwesome;
   height: 69px;
   line-height: 69px;
   width: 59px;
   text-align: center;
   transform: rotate(180deg);
-  transition: all 0.5s;
+  color: white;
   z-index: 1;
+  transition: all 0.5s ease-in-out;
+}
+.restaurant .submenu__item::after {
+  content: "";
+  position: absolute;
+  right: 0;
+  height: 69px;
+  width: 59px;
+  margin-right: -59px;
+  border-radius: 0 15px 15px 0;
+  background-color: #99e2d0;
+  z-index: 0;
+  transition: all 0.5s ease-in-out;
 }
 .restaurant .submenu__title {
   padding-top: 12px;
+  transition: all 0.5s ease-in-out;
 }
 .restaurant .submenu__description-container {
   display: flex;
   flex-direction: initial;
-  justify-content: initial;
+  justify-content: space-between;
   align-items: initial;
   gap: initial;
   padding-bottom: 13.5px;
 }
-.restaurant .submenu__description {
-  color: red;
-}
 .restaurant .submenu__price {
   padding-right: 15px;
-  transition: all 0.5s;
+  transition: all 0.5s ease-in-out;
 }
