@@ -62,9 +62,11 @@ body {
   .submenu {
     &__title {
       @include typography($size: 18px, $weight: $semi-bold);
+      line-height:21.09px;
     }
     &__description {
       @include typography($size: 15px, $weight: $thin);
+      line-height:17.63px;
     }
     &__price {
       @include typography($weight: $bold);

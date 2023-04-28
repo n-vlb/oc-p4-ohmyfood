@@ -11,6 +11,7 @@ $gradient-primary-color--light: lighten($gradient-primary-color, 3%);
 $gradient-secondary-color--light: lighten($gradient-secondary-color, 3%);
 $gradient-secondary-color--dark: darken($gradient-secondary-color, 50%);
 // ## -- Others ----------------------------- ## //
+// ## -- loader dots colors ----------------- ## //
 $loader-colors: (
   1: $badge-secondary-color,
   2: $badge-primary-color,

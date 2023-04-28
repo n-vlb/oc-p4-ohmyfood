@@ -145,11 +145,13 @@ body {
   font-family: "Roboto", sans-serif;
   font-size: 18px;
   font-weight: 500;
+  line-height: 21.09px;
 }
 .restaurant .submenu__description {
   font-family: "Roboto", sans-serif;
   font-size: 15px;
   font-weight: 300;
+  line-height: 17.63px;
 }
 .restaurant .submenu__price {
   font-family: "Roboto", sans-serif;
@@ -827,7 +829,7 @@ body {
   flex-direction: column;
   justify-content: initial;
   align-items: initial;
-  gap: 5px;
+  gap: 4px;
   position: relative;
   height: 69px;
   padding-left: 15px;
@@ -888,7 +890,7 @@ body {
   justify-content: space-between;
   align-items: initial;
   gap: initial;
-  padding-bottom: 13.5px;
+  padding-bottom: 12.5px;
 }
 .restaurant .submenu__price {
   padding-right: 15px;
