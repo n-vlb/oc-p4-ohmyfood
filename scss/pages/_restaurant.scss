@@ -65,10 +65,16 @@
       position: relative;
       height: 69px;
       padding-left:15px;
-      background-color: white;
       border-radius: 15px;
-      overflow: hidden; //hide check button
-      &:hover {
+      box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.1);
+      background-color: white;
+      overflow: hidden; //hide check button when overflow/
+      transition: all .5s;
+      &:hover,
+      &:focus{
+        box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.15);
+      }
+      &:active {
         cursor: pointer;
         &::before {
           color: white;
