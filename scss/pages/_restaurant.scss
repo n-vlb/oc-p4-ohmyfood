@@ -5,7 +5,8 @@
     $gap: 40px
   ); //$align: center,
   margin: 0 auto;
-  padding-top: 40px;
+  padding-top: 32px;
+  padding-bottom:40px;
   // padding-right:5px;
   // padding-left:5px;
   max-width: 1055px;
@@ -43,6 +44,7 @@
     right: 0px;
   }
   .menu {
+    @include flex($direction:column, $gap:40px);
     padding-right: 17px;
     padding-left: 17px;
     width: 100%;

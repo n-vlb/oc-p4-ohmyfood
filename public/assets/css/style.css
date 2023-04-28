@@ -749,7 +749,8 @@ body {
   align-items: center;
   gap: 40px;
   margin: 0 auto;
-  padding-top: 40px;
+  padding-top: 32px;
+  padding-bottom: 40px;
   max-width: 1055px;
   background-color: #f6f6f6;
   border-radius: 40px 40px 0 0;
@@ -785,6 +786,11 @@ body {
   right: 0px;
 }
 .restaurant .menu {
+  display: flex;
+  flex-direction: column;
+  justify-content: initial;
+  align-items: initial;
+  gap: 40px;
   padding-right: 17px;
   padding-left: 17px;
   width: 100%;
