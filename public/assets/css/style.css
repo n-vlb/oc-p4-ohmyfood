@@ -391,6 +391,9 @@ body {
 .footer__title {
   height: 27px;
 }
+.footer__title:hover {
+  color: lightgray;
+}
 @media (min-width: 768px) {
   .footer__title {
     width: 16%;
@@ -421,6 +424,9 @@ body {
   gap: 10px;
   height: 19px;
   width: 190px;
+}
+.footer__link:hover {
+  color: lightgray;
 }
 .footer__link--alt-size {
   width: 130px;

@@ -10,16 +10,15 @@ footer {
   @include flex($direction: column, $gap: 16px);
   width: 100%;
   padding: 22px 25px;
-  max-width: 1440px; 
+  max-width: 1440px;
   color: $footer-font-color;
-  
 
   @include for-size(tablet) {
     @include flex(row-reverse, initial, flex-end, 0);
     height: 114px;
     padding: 30px 17.5px;
     address .footer__link {
-      width: 100px; 
+      width: 100px;
     }
   }
 
@@ -33,6 +32,9 @@ footer {
 
   &__title {
     height: 27px;
+    &:hover {
+      color: lightgray;
+    }
     @include for-size(tablet) {
       width: 16%;
       max-width: 139px;
@@ -50,6 +52,9 @@ footer {
     @include flex($align: center, $gap: 10px);
     height: 19px;
     width: 190px;
+    &:hover {
+      color: lightgray;
+    }
     &--alt-size {
       width: 130px;
     }
