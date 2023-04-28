@@ -748,14 +748,30 @@ body {
   justify-content: initial;
   align-items: center;
   gap: 40px;
-  margin: 0 auto;
-  padding-top: 32px;
-  padding-bottom: 40px;
-  max-width: 1055px;
-  background-color: #f6f6f6;
-  border-radius: 40px 40px 0 0;
-  z-index: 1;
   position: relative;
+  margin: 0 auto;
+  padding: 32px 5px 40px 5px;
+  max-width: 1055px;
+  border-radius: 40px 40px 0 0;
+  background-color: #f6f6f6;
+}
+@media (min-width: 375px) {
+  .restaurant {
+    padding-right: 13px;
+    padding-left: 13px;
+  }
+}
+@media (min-width: 768px) {
+  .restaurant {
+    padding-right: 50px;
+    padding-left: 50px;
+  }
+}
+@media (min-width: 1024px) {
+  .restaurant {
+    padding-right: 210px;
+    padding-left: 210px;
+  }
 }
 .restaurant__picture {
   -o-object-fit: cover;
@@ -766,19 +782,16 @@ body {
   z-index: 0;
 }
 .restaurant__title-container {
-  width: 100%;
-  padding-left: 10px;
-  padding-right: 10px;
-  max-width: 375px;
   display: flex;
   align-self: center;
+  width: 100%;
+  max-width: 375px;
   position: relative;
 }
 .restaurant__title {
   display: inline-block;
 }
 .restaurant__like-icon {
-  margin-right: 12px;
   line-height: 40px;
   font-size: 22px;
   display: inline-block;
@@ -791,8 +804,6 @@ body {
   justify-content: initial;
   align-items: initial;
   gap: 40px;
-  padding-right: 17px;
-  padding-left: 17px;
   width: 100%;
 }
 .restaurant .menu__title:after {

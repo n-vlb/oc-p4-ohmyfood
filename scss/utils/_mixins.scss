@@ -21,7 +21,11 @@
 
 // Media Queries - Mobile First
 @mixin for-size($size) {
-  @if $size == tablet {
+  @if $size == mobile-medium {
+    @media (min-width: 375px) {
+      @content;
+    }
+  } @else if $size == tablet {
     @media (min-width: 768px) {
       @content;
     }
@@ -29,11 +33,9 @@
     @media (min-width: 1024px) {
       @content;
     }
-  }
-  @else if $size == large-desktop {
+  } @else if $size == large-desktop {
     @media (min-width: 1440px) {
       @content;
     }
   }
 }
-
