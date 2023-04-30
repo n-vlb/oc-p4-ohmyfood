@@ -2,9 +2,13 @@
 @import url("https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&family=Shrikhand&display=swap");
 /* # - Heart like gradient ------------------- # */
 .restaurant .fas:hover + .far, .restaurant .fas:focus + .far, .restaurant .fas:active + .far,
+.restaurant-page .fas:hover + .far,
+.restaurant-page .fas:focus + .far,
+.restaurant-page .fas:active + .far,
 .card .fas:hover + .far,
 .card .fas:focus + .far,
 .card .fas:active + .far, .restaurant .fas,
+.restaurant-page .fas,
 .card .fas {
   background: linear-gradient(rgb(147, 86, 220), #ff79da);
   background-clip: text;
@@ -13,7 +17,7 @@
 }
 
 /* # - short-text ------------------- # */
-.restaurant .submenu__description, .restaurant .submenu__title {
+.restaurant .submenu__description, .restaurant .submenu__title, .restaurant-page form p, .restaurant-page form h3 {
   overflow: hidden;
   white-space: nowrap;
   text-overflow: ellipsis;
@@ -38,7 +42,7 @@ header {
 
 main {
   z-index: 0;
-  background: white;
+  background: pink;
   margin: auto;
 }
 
@@ -156,6 +160,35 @@ body {
 .restaurant .submenu__price {
   font-family: "Roboto", sans-serif;
   font-size: 16px;
+  font-weight: 700;
+}
+
+.restaurant-page__title {
+  font-family: "Shrikhand", cursive;
+  font-size: 28px;
+  font-weight: 400;
+}
+.restaurant-page form h2 {
+  font-family: "Roboto", sans-serif;
+  font-size: 16px;
+  font-weight: 300;
+  text-transform: uppercase;
+}
+.restaurant-page form h3 {
+  font-family: "Roboto", sans-serif;
+  font-size: 18px;
+  font-weight: 500;
+  line-height: 21.09px;
+}
+.restaurant-page form p {
+  font-family: "Roboto", sans-serif;
+  font-size: 15px;
+  font-weight: 300;
+  line-height: 17.63px;
+}
+.restaurant-page form span {
+  font-family: "Roboto", sans-serif;
+  font-size: 15px;
   font-weight: 700;
 }
 
@@ -537,12 +570,14 @@ body {
 
 /* # - Heart icon animation ------------------ # */
 .restaurant .far,
+.restaurant-page .far,
 .card .far {
   text-align: center;
   width: 26px;
   color: inherit;
 }
 .restaurant .fas,
+.restaurant-page .fas,
 .card .fas {
   text-align: center;
   width: 26px;
@@ -551,6 +586,9 @@ body {
   transition: opacity 0.5s;
 }
 .restaurant .fas:hover, .restaurant .fas:focus, .restaurant .fas:active,
+.restaurant-page .fas:hover,
+.restaurant-page .fas:focus,
+.restaurant-page .fas:active,
 .card .fas:hover,
 .card .fas:focus,
 .card .fas:active {
@@ -615,6 +653,108 @@ body {
   position: absolute;
   right: 23px;
   bottom: 32px;
+}
+
+.restaurant-page form {
+  background: #f6f6f6;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: initial;
+  align-items: initial;
+  gap: 12px;
+}
+.restaurant-page form input[type=radio] {
+  display: none;
+}
+.restaurant-page form input[type=radio]:checked + label::before {
+  transform: rotate(0deg);
+  margin-right: 0;
+}
+.restaurant-page form input[type=radio]:checked + label::after {
+  margin-right: 0;
+}
+.restaurant-page form input[type=radio]:checked + label h3, .restaurant-page form input[type=radio]:checked + label span {
+  padding-right: 59px;
+}
+.restaurant-page form h2 {
+  margin-top: 40px;
+  margin-left: 3.4vw;
+}
+.restaurant-page form h2::after {
+  content: "";
+  margin-top: 5px;
+  width: 40px;
+  height: 3px;
+  display: block;
+  background-color: aquamarine;
+}
+.restaurant-page form label {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: initial;
+  gap: 0;
+  position: relative;
+  margin: 0 3.47vw;
+  padding-left: 15px;
+  padding-right: 15px;
+  height: 69px;
+  border-radius: 15px;
+  overflow: hidden;
+  background-color: white;
+}
+@media (min-width: 1024px) {
+  .restaurant-page form label {
+    margin: 0;
+  }
+}
+.restaurant-page form label::before {
+  color: white;
+  content: "\f058";
+  font-family: fontAwesome;
+  font-size: 20px;
+  position: absolute;
+  right: 0;
+  top: 0;
+  height: inherit;
+  width: 59px;
+  line-height: 69px;
+  text-align: center;
+  margin-right: -59px;
+  transform: rotate(180deg);
+  z-index: 1;
+  transition: all 0.5s ease-in-out;
+}
+.restaurant-page form label::after {
+  content: "";
+  position: absolute;
+  right: 0;
+  top: 0;
+  height: inherit;
+  width: 59px;
+  margin-right: -59px;
+  border-radius: 0 15px 15px 0;
+  background-color: #99e2d0;
+  transition: all 0.5s ease-in-out;
+}
+.restaurant-page form h3 {
+  margin-top: 12px;
+  transition: all 0.5s ease-in-out;
+}
+.restaurant-page form span {
+  transition: all 0.5s ease-in-out;
+}
+.restaurant-page form div {
+  display: flex;
+  flex-direction: initial;
+  justify-content: space-between;
+  align-items: initial;
+  gap: initial;
+  margin-bottom: 13.5px;
+}
+.restaurant-page form button {
+  margin: 28px auto 40px auto;
 }
 
 /* # - Homepage ------------------------------ # */
@@ -908,4 +1048,64 @@ body {
 .restaurant .submenu__price {
   padding-right: 15px;
   transition: all 0.5s ease-in-out;
+}
+
+.restaurant-page {
+  background-color: white;
+}
+.restaurant-page__picture {
+  -o-object-fit: cover;
+     object-fit: cover;
+  height: 275px;
+  width: 100%;
+}
+.restaurant-page__headline {
+  margin: -40px auto 0 auto;
+  max-width: 1055px;
+  display: flex;
+  flex-direction: initial;
+  justify-content: space-between;
+  align-items: initial;
+  gap: initial;
+  position: relative;
+  padding: 32px 3.4vw 0px 3.4vw;
+  background-color: inherit;
+  border-radius: 40px 40px 0 0;
+  z-index: 1;
+  background: #f6f6f6;
+}
+@media (min-width: 768px) {
+  .restaurant-page__headline {
+    padding-right: 225px;
+    padding-left: 225px;
+  }
+}
+@media (min-width: 1024px) {
+  .restaurant-page__headline {
+    padding-right: 365px;
+    padding-left: 365px;
+  }
+}
+.restaurant-page__like-icon-container {
+  font-size: 22px;
+  width: 22px;
+}
+.restaurant-page__like-icon {
+  position: absolute;
+  line-height: 41px;
+}
+.restaurant-page__form {
+  max-width: 1055px;
+}
+@media (min-width: 768px) {
+  .restaurant-page__form {
+    padding-right: 100px;
+    padding-left: 100px;
+  }
+}
+@media (min-width: 1024px) {
+  .restaurant-page__form {
+    padding-right: 210px;
+    padding-left: 210px;
+  }
 }

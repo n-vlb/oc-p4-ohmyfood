@@ -1,0 +1,93 @@
+.restaurant-page form {
+    background:$restaurant-page-backgound;
+    margin:0 auto;
+    @include flex($direction:column, $gap:12px);
+  //<-- include parent's form here
+  input[type="radio"] {
+    display: none;
+    &:checked + label::before {
+      transform: rotate(0deg); //flip icon in original position
+      margin-right: 0;
+    }
+    &:checked + label::after {
+      margin-right: 0; //translate "container"
+    }
+    &:checked + label h3,
+    &:checked + label span {
+      padding-right: 59px; // reduce description and title size.
+    }
+  }
+
+  h2 {
+    margin-top:40px;
+    margin-left: 3.4vw;
+    &::after {
+      //underline title
+      content: "";
+      margin-top: 5px;
+      width: 40px;
+      height: 3px;
+      display: block;
+      background-color: aquamarine;
+    }
+  }
+  label {
+    @include flex(column, space-between, initial, 0);
+    position: relative; // for ::before & ::after positionning
+    margin: 0 3.47vw;
+    padding-left: 15px;
+    padding-right: 15px;
+    height: 69px;
+    border-radius: 15px;
+    overflow:hidden; //hide ::before and ::after
+    background-color: white;
+    @include for-size(desktop){
+        margin:0;
+    }
+    // checkbox
+    &::before {
+      color: white;
+      content: "\f058";
+      font-family: fontAwesome;
+      font-size: 20px;
+      position: absolute;
+      right: 0;
+      top: 0;
+      height: inherit;
+      width: 59px;
+      line-height: 69px; //align vertically
+      text-align: center; //align horizontally
+      margin-right: -59px; //initial position
+      transform: rotate(180deg); // initial upside down position
+      z-index: 1;
+      transition: all 0.5s ease-in-out; //natural bezier transition
+    }
+    &::after {
+      content: "";
+      position: absolute;
+      right: 0;
+      top: 0;
+      height: inherit;
+      width: 59px;
+      margin-right: -59px;
+      border-radius: 0 15px 15px 0;
+      background-color: $badge-primary-color;
+      transition: all 0.5s ease-in-out;
+    }
+  }
+
+  h3 {
+    margin-top: 12px;
+    transition: all 0.5s ease-in-out; //natural bezier transition
+  }
+  span {
+    transition: all 0.5s ease-in-out; //natural bezier transition
+  }
+  div {
+    @include flex($justify: space-between);
+    margin-bottom: 13.5px;
+  }
+  button {
+    margin:28px auto 40px auto ;
+  }
+}

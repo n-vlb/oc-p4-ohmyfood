@@ -6,18 +6,18 @@
 }
 
 body {
-  position:relative;
+  position: relative;
   width: 100%;
   margin: auto;
 }
 
-header{
-  background:white;
+header {
+  background: white;
 }
-main{
-  z-index:0;
-  background:white;
-  margin:auto;
+main {
+  z-index: 0;
+  background: pink;
+  margin: auto;
 }
 
 footer {
@@ -45,5 +45,5 @@ input {
 }
 
 address {
-  font-style:inherit;
+  font-style: inherit;
 }
