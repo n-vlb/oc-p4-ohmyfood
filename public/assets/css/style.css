@@ -84,10 +84,18 @@ body {
   font-weight: 400;
 }
 
-.localisation {
+.localisation-container input[type=text]::-moz-placeholder {
   font-family: "Roboto", sans-serif;
   font-size: 16px;
   font-weight: 500;
+  color: inherit;
+}
+
+.localisation-container input[type=text], .localisation-container input[type=text]::placeholder {
+  font-family: "Roboto", sans-serif;
+  font-size: 16px;
+  font-weight: 500;
+  color: inherit;
 }
 
 .reservation__content {
@@ -742,14 +750,25 @@ body {
 
 /* # - Homepage ------------------------------ # */
 /* ## -- section localisation ---------------- ## */
-.localisation {
+.localisation-container {
   display: flex;
   flex-direction: row;
   justify-content: center;
   align-items: center;
   gap: 17px;
+  margin: 0 auto;
   background-color: #eaeaea;
   height: 50px;
+}
+.localisation-container input[type=text] {
+  width: 109px;
+  background-color: #eaeaea;
+}
+.localisation-container input[type=text]:focus::-moz-placeholder {
+  opacity: 0;
+}
+.localisation-container input[type=text]:focus::placeholder {
+  opacity: 0;
 }
 
 /* ## -- section reservation ----------------- ## */

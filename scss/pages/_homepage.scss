@@ -1,9 +1,18 @@
 /* # - Homepage ------------------------------ # */
 /* ## -- section localisation ---------------- ## */
-.localisation {
+.localisation-container {
   @include flex(row, center, center, 17px);
+  margin: 0 auto;
   background-color: $tertiary-background-color;
   height: 50px;
+
+  input[type="text"] {
+    width: 109px;
+    background-color: $tertiary-background-color;
+    &:focus::placeholder {
+      opacity: 0;
+    }
+  }
 }
 /* ## -- section reservation ----------------- ## */
 .reservation {
@@ -28,7 +37,7 @@
 /* ## -- section guide ----------------------- ## */
 .guide {
   @include flex($direction: column, $gap: 26px);
-  background-color:white;
+  background-color: white;
   padding: 48px 20px 68px 20px;
   @include for-size(desktop) {
     @include flex($direction: column, $align: center, $gap: 25px);
