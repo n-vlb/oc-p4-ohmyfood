@@ -681,6 +681,11 @@ body {
   margin-top: 40px;
   margin-left: 3.4vw;
 }
+@media (min-width: 1024px) {
+  .restaurant-page form h2 {
+    margin: 0;
+  }
+}
 .restaurant-page form h2::after {
   content: "";
   margin-top: 5px;
