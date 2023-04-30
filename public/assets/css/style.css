@@ -17,7 +17,7 @@
 }
 
 /* # - short-text ------------------- # */
-.restaurant .submenu__description, .restaurant .submenu__title, .restaurant-page form p, .restaurant-page form h3 {
+.restaurant-page .form__description, .restaurant-page .form__subtitle {
   overflow: hidden;
   white-space: nowrap;
   text-overflow: ellipsis;
@@ -42,7 +42,6 @@ header {
 
 main {
   z-index: 0;
-  background: pink;
   margin: auto;
 }
 
@@ -129,64 +128,31 @@ body {
   font-weight: 700;
 }
 
-.restaurant__title {
-  font-family: "Shrikhand", cursive;
-  font-size: 28px;
-  font-weight: 400;
-}
-.restaurant .menu__title {
-  font-family: "Roboto", sans-serif;
-  font-size: 16px;
-  font-weight: 300;
-  text-transform: uppercase;
-}
-.restaurant .menu__title__title {
-  font-family: "Shrikhand", cursive;
-  font-size: 28px;
-  font-weight: 400;
-}
-.restaurant .submenu__title {
-  font-family: "Roboto", sans-serif;
-  font-size: 18px;
-  font-weight: 500;
-  line-height: 21.09px;
-}
-.restaurant .submenu__description {
-  font-family: "Roboto", sans-serif;
-  font-size: 15px;
-  font-weight: 300;
-  line-height: 17.63px;
-}
-.restaurant .submenu__price {
-  font-family: "Roboto", sans-serif;
-  font-size: 16px;
-  font-weight: 700;
-}
-
 .restaurant-page__title {
   font-family: "Shrikhand", cursive;
   font-size: 28px;
   font-weight: 400;
 }
-.restaurant-page form h2 {
+.restaurant-page .form__title {
   font-family: "Roboto", sans-serif;
   font-size: 16px;
   font-weight: 300;
   text-transform: uppercase;
+  line-height: 18.75px;
 }
-.restaurant-page form h3 {
+.restaurant-page .form__subtitle {
   font-family: "Roboto", sans-serif;
   font-size: 18px;
   font-weight: 500;
   line-height: 21.09px;
 }
-.restaurant-page form p {
+.restaurant-page .form__description {
   font-family: "Roboto", sans-serif;
   font-size: 15px;
   font-weight: 300;
   line-height: 17.63px;
 }
-.restaurant-page form span {
+.restaurant-page .form__price {
   font-family: "Roboto", sans-serif;
   font-size: 15px;
   font-weight: 700;
@@ -674,25 +640,8 @@ body {
 .restaurant-page form input[type=radio]:checked + label::after {
   margin-right: 0;
 }
-.restaurant-page form input[type=radio]:checked + label h3, .restaurant-page form input[type=radio]:checked + label span {
+.restaurant-page form input[type=radio]:checked + label .form__subtitle, .restaurant-page form input[type=radio]:checked + label .form__price {
   padding-right: 59px;
-}
-.restaurant-page form h2 {
-  margin-top: 40px;
-  margin-left: 3.4vw;
-}
-@media (min-width: 1024px) {
-  .restaurant-page form h2 {
-    margin: 0;
-  }
-}
-.restaurant-page form h2::after {
-  content: "";
-  margin-top: 5px;
-  width: 40px;
-  height: 3px;
-  display: block;
-  background-color: aquamarine;
 }
 .restaurant-page form label {
   display: flex;
@@ -707,12 +656,17 @@ body {
   height: 69px;
   border-radius: 15px;
   overflow: hidden;
+  box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.1);
   background-color: white;
+  transition: box-shadow 0.5s;
 }
 @media (min-width: 1024px) {
   .restaurant-page form label {
     margin: 0;
   }
+}
+.restaurant-page form label:hover, .restaurant-page form label:focus {
+  box-shadow: 0px 4px 17px rgba(0, 0, 0, 0.15);
 }
 .restaurant-page form label::before {
   color: white;
@@ -743,14 +697,38 @@ body {
   background-color: #99e2d0;
   transition: all 0.5s ease-in-out;
 }
-.restaurant-page form h3 {
+.restaurant-page form .form__title {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: initial;
+  gap: initial;
+  height: 27px;
+  margin-top: 40px;
+  margin-left: 3.4vw;
+}
+@media (min-width: 1024px) {
+  .restaurant-page form .form__title {
+    margin-left: 0;
+  }
+}
+.restaurant-page form .form__title::after {
+  justify-self: flex-end;
+  content: "";
+  overflow: visible;
+  width: 40px;
+  height: 3px;
+  display: block;
+  background-color: #99e2d0;
+}
+.restaurant-page form .form__subtitle {
   margin-top: 12px;
   transition: all 0.5s ease-in-out;
 }
-.restaurant-page form span {
+.restaurant-page form .form__price {
   transition: all 0.5s ease-in-out;
 }
-.restaurant-page form div {
+.restaurant-page form .form__description-container {
   display: flex;
   flex-direction: initial;
   justify-content: space-between;
@@ -897,164 +875,6 @@ body {
   }
 }
 
-.restaurant {
-  display: flex;
-  flex-direction: column;
-  justify-content: initial;
-  align-items: center;
-  gap: 40px;
-  position: relative;
-  margin: 0 auto;
-  padding: 32px 5px 40px 5px;
-  max-width: 1055px;
-  border-radius: 40px 40px 0 0;
-  background-color: #f6f6f6;
-}
-@media (min-width: 375px) {
-  .restaurant {
-    padding-right: 13px;
-    padding-left: 13px;
-  }
-}
-@media (min-width: 768px) {
-  .restaurant {
-    padding-right: 50px;
-    padding-left: 50px;
-  }
-}
-@media (min-width: 1024px) {
-  .restaurant {
-    padding-right: 210px;
-    padding-left: 210px;
-  }
-}
-.restaurant__picture {
-  -o-object-fit: cover;
-     object-fit: cover;
-  height: 275px;
-  width: 100%;
-  margin-bottom: -40px;
-  z-index: 0;
-}
-.restaurant__title-container {
-  display: flex;
-  align-self: center;
-  width: 100%;
-  max-width: 375px;
-  position: relative;
-}
-.restaurant__title {
-  display: inline-block;
-}
-.restaurant__like-icon {
-  line-height: 40px;
-  font-size: 22px;
-  display: inline-block;
-  position: absolute;
-  right: 0px;
-}
-.restaurant .menu {
-  display: flex;
-  flex-direction: column;
-  justify-content: initial;
-  align-items: initial;
-  gap: 40px;
-  width: 100%;
-}
-.restaurant .menu__title:after {
-  margin-bottom: 12px;
-  margin-top: 5px;
-  content: "";
-  display: block;
-  height: 3px;
-  width: 40px;
-  background-color: #99e2d0;
-}
-.restaurant .submenu {
-  display: flex;
-  flex-direction: column;
-  justify-content: initial;
-  align-items: initial;
-  gap: 12px;
-}
-.restaurant .submenu__item {
-  display: flex;
-  flex-direction: column;
-  justify-content: initial;
-  align-items: initial;
-  gap: 4px;
-  position: relative;
-  height: 69px;
-  padding-left: 15px;
-  border-radius: 15px;
-  box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.1);
-  background-color: white;
-  overflow: hidden;
-  transition: all 0.5s;
-}
-.restaurant .submenu__item:hover, .restaurant .submenu__item:focus {
-  box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.15);
-}
-.restaurant .submenu__item:active {
-  cursor: pointer;
-}
-.restaurant .submenu__item:active::before {
-  color: white;
-  transform: rotate(0deg);
-  margin-right: 0;
-}
-.restaurant .submenu__item:active::after {
-  margin-right: 0;
-}
-.restaurant .submenu__item:active .submenu__price,
-.restaurant .submenu__item:active .submenu__title {
-  padding-right: 75px;
-}
-.restaurant .submenu__item::before {
-  font-family: fontAwesome;
-  content: "\f058";
-  position: absolute;
-  right: 0px;
-  margin-right: -59px;
-  font-size: 20px;
-  height: 69px;
-  line-height: 69px;
-  width: 59px;
-  text-align: center;
-  transform: rotate(180deg);
-  color: white;
-  z-index: 1;
-  transition: all 0.5s ease-in-out;
-}
-.restaurant .submenu__item::after {
-  content: "";
-  position: absolute;
-  right: 0;
-  height: 69px;
-  width: 59px;
-  margin-right: -59px;
-  border-radius: 0 15px 15px 0;
-  background-color: #99e2d0;
-  z-index: 0;
-  transition: all 0.5s ease-in-out;
-}
-.restaurant .submenu__title {
-  padding-top: 12px;
-  transition: all 0.5s ease-in-out;
-}
-.restaurant .submenu__description-container {
-  display: flex;
-  flex-direction: initial;
-  justify-content: space-between;
-  align-items: initial;
-  gap: initial;
-  padding-bottom: 12.5px;
-}
-.restaurant .submenu__price {
-  padding-right: 15px;
-  transition: all 0.5s ease-in-out;
-}
-
 .restaurant-page {
   background-color: white;
 }
@@ -1093,7 +913,7 @@ body {
 }
 .restaurant-page__like-icon-container {
   font-size: 22px;
-  width: 22px;
+  width: 24px;
 }
 .restaurant-page__like-icon {
   position: absolute;

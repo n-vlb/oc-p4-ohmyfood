@@ -1,142 +1,46 @@
-.restaurant {
-  @include flex($direction: column, $align: center, $gap: 40px);
-  position: relative;
-  margin: 0 auto;
-  padding:32px 5px 40px 5px;
-  max-width: 1055px;
-  border-radius: 40px 40px 0 0;
-  background-color: $menu-background-color;
-  @include for-size(mobile-medium){
-    padding-right:13px;
-    padding-left:13px;
-  }
-  @include for-size(tablet){
-    padding-right:50px;
-    padding-left:50px;
-  }
-  @include for-size(desktop){
-    padding-right:210px;
-    padding-left:210px;
-  }
+.restaurant-page {
+  background-color: white;
   &__picture {
     object-fit: cover;
     height: 275px;
     width: 100%;
-    margin-bottom: -40px;
-    z-index: 0;
-    
   }
-  &__title-container {
-    display: flex;
-    align-self: center;
-    width: 100%;
-    max-width: calc(341px + 34px);
+  &__headline {
+    margin: -40px auto 0 auto;
+    max-width: 1055px;
+    @include flex($justify: space-between);
     position: relative;
+    padding: 32px 3.4vw 0px 3.4vw;
+    background-color: inherit;
+    border-radius: 40px 40px 0 0;
+    z-index: 1;
+    background: $restaurant-page-backgound;
+    @include for-size(tablet) {
+      padding-right: 225px;
+      padding-left: 225px;
+    }
+    @include for-size(desktop) {
+      padding-right: 365px;
+      padding-left: 365px;
+    }
   }
-  &__title {
-    display: inline-block;
+  &__like-icon-container {
+    font-size: 22px;
+    width: 24px;
   }
   &__like-icon {
-    line-height: 40px;
-    font-size: 22px;
-    display: inline-block;
     position: absolute;
-    right: 0px;
+    line-height: 41px;
   }
-  .menu {
-    @include flex($direction: column, $gap: 40px);
-  
-    width: 100%;
-    &__title:after {
-      margin-bottom: 12px;
-      margin-top: 5px;
-      content: "";
-      display: block;
-      height: 3px;
-      width: 40px;
-
-      background-color: $badge-primary-color;
+  &__form {
+    max-width: 1055px;
+    @include for-size(tablet) {
+      padding-right: 100px;
+      padding-left: 100px;
     }
-  }
-  .submenu {
-    @include flex($direction: column, $gap: 12px);
-    &__item {
-      @include flex($direction: column, $gap: 4px);
-      position: relative;
-      height: 69px;
-      padding-left:15px;
-      border-radius: 15px;
-      box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.1);
-      background-color: white;
-      overflow: hidden; //hide check button when overflow/
-      transition: all .5s;
-      &:hover,
-      &:focus{
-        box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.15);
-      }
-      &:active {
-        cursor: pointer;
-        &::before {
-          color: white;
-          transform: rotate(0deg);
-          margin-right: 0;
-        }
-        &::after {
-          margin-right: 0;
-        }
-        .submenu__price,
-        .submenu__title {
-          padding-right: 75px;
-        }
-      }
-      &::before {
-        font-family: fontAwesome;
-        content: "\f058";
-        position: absolute;
-        right: 0px;
-
-        margin-right: -59px;
-        // display: inline-block;
-        font-size: 20px;
-
-        height: 69px;
-        line-height: 69px;
-        width: 59px;
-        text-align: center;
-        transform: rotate(180deg);
-
-        color: white;
-        z-index: 1;
-        transition: all 0.5s ease-in-out;
-      }
-      &::after {
-        content: "";
-        position: absolute;
-        right: 0;
-        height: 69px;
-        width: 59px;
-        margin-right: -59px;
-        border-radius: 0 15px 15px 0;
-        background-color: $badge-primary-color;
-        z-index: 0;
-        transition: all 0.5s ease-in-out;
-      }
-    }
-    &__title {
-      @extend %short-text;
-      padding-top: 12px;
-      transition: all 0.5s ease-in-out;
-    }
-    &__description-container {
-      @include flex($justify: space-between);
-      padding-bottom: 12.5px;
-    }
-    &__description {
-      @extend %short-text;
-    }
-    &__price {
-      padding-right: 15px;
-      transition: all 0.5s ease-in-out;
+    @include for-size(desktop) {
+      padding-right: 210px;
+      padding-left: 210px;
     }
   }
 }

@@ -45,56 +45,29 @@ body {
 .button-style1:active {
   @include typography($weight: $bold);
 }
-//restaurant-old
-.restaurant {
-  &__title {
-    @include typography($family: $title-font, $size: 28px);
-  }
-  .menu {
-    &__title {
-      @include typography($weight: $thin);
-      text-transform: uppercase;
-      &__title {
-        @include typography($family: $title-font, $size: 28px);
-      }
-    }
-  }
-  .submenu {
-    &__title {
-      @include typography($size: 18px, $weight: $semi-bold);
-      line-height: 21.09px;
-    }
-    &__description {
-      @include typography($size: 15px, $weight: $thin);
-      line-height: 17.63px;
-    }
-    &__price {
-      @include typography($weight: $bold);
-    }
-  }
-}
-//restaurant-new
 
+//restaurant
 .restaurant-page {
   &__title {
     @include typography($family: $title-font, $size: 28px);
   }
-  form {
-    h2 {
+  .form {
+    &__title {
       @include typography($weight: $thin);
       text-transform: uppercase;
+      line-height: 18.75px;
     }
-    h3 {
+    &__subtitle {
       @include typography($size: 18px, $weight: $semi-bold);
       line-height: 21.09px;
       @extend %short-text;
     }
-    p {
+    &__description {
       @include typography($size: 15px, $weight: $thin);
       line-height: 17.63px;
       @extend %short-text;
     }
-    span {
+    &__price {
       @include typography($size: 15px, $weight: $bold);
     }
   }
