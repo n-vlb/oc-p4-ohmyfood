@@ -65,6 +65,7 @@
   padding: 54px 17.5px 66px 17.5px;
   @include for-size(desktop) {
     padding-top: 30px;
+    margin-top:-1px; // hide loader display bug on 1440px screen
   }
 
   &__title {
