@@ -1,17 +1,19 @@
+/* # - Form ---------------------------------- # */
 .restaurant-page {
-  //<-- form parent containers
+  //<-- insert here form parents containers
   .form {
     background: $restaurant-page-backgound;
     margin: 0 auto;
     @include flex($direction: column, $gap: 12px);
     input[type="radio"] {
       display: none;
+      //label animation
       &:checked + label::before {
-        transform: rotate(0deg); //flip icon in original position
+        transform: rotate(0deg); //flip icon in original  default:180°
         margin-right: 0;
       }
       &:checked + label::after {
-        margin-right: 0; //translate "container"
+        margin-right: 0; //translate "container" default:59px
       }
       &:checked + label .form__subtitle,
       &:checked + label .form__price {
@@ -37,12 +39,12 @@
       &:focus {
         box-shadow: 0px 4px 17px rgba(0, 0, 0, 0.15);
       }
-      // checkbox icon
+      // custom radio button icon
       &::before {
-        color: white;
         content: "\f058";
         font-family: fontAwesome;
         font-size: 20px;
+        color: white;
         position: absolute;
         right: 0;
         top: 0;
@@ -55,7 +57,7 @@
         z-index: 1;
         transition: all 0.5s ease-in-out; //natural bezier transition
       }
-      // checkbox icon container
+      // custom radio button icon container
       &::after {
         content: "";
         position: absolute;
@@ -63,7 +65,7 @@
         top: 0;
         height: inherit;
         width: 59px;
-        margin-right: -59px;
+        margin-right: -59px;//initial position
         border-radius: 0 15px 15px 0;
         background-color: $badge-primary-color;
         transition: all 0.5s ease-in-out;

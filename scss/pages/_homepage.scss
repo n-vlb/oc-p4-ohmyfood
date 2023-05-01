@@ -2,15 +2,15 @@
 /* ## -- section localisation ---------------- ## */
 .localisation-container {
   @include flex(row, center, center, 17px);
+  height: 50px;
   margin: 0 auto;
   background-color: $tertiary-background-color;
-  height: 50px;
 
   input[type="text"] {
     width: 109px;
     background-color: $tertiary-background-color;
     &:focus::placeholder {
-      opacity: 0;
+      opacity: 0; //hide placeholder on focus
     }
   }
 }
@@ -18,8 +18,7 @@
 .reservation {
   text-align: center;
   @include flex(column, center, center, 0);
-  padding-top: 39px;
-  padding-bottom: 59px;
+  padding: 39px 0 59px 0;
   background-color: $primary-background-color;
 
   &__title {
@@ -37,8 +36,8 @@
 /* ## -- section guide ----------------------- ## */
 .guide {
   @include flex($direction: column, $gap: 26px);
-  background-color: white;
   padding: 48px 20px 68px 20px;
+  background-color: white;
   @include for-size(desktop) {
     @include flex($direction: column, $align: center, $gap: 25px);
   }
@@ -65,7 +64,7 @@
   padding: 54px 17.5px 66px 17.5px;
   @include for-size(desktop) {
     padding-top: 30px;
-    margin-top:-1px; // hide loader display bug on 1440px screen
+    margin-top: -1px; // fix loader display bug on 1440px screen
   }
 
   &__title {
@@ -80,13 +79,11 @@
     width: 100%;
     max-width: 1080px;
     @include for-size(tablet) {
-      // background:green;
       gap: 20px;
     }
     @include for-size(desktop) {
       justify-content: space-between;
       gap: 50px;
-      // background:red;
     }
   }
 
