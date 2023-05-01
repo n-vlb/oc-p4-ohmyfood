@@ -46,7 +46,7 @@
     //animation on label
     label {
       opacity: 0%;
-      transform: scaleX(0%);
+      transform: scaleX(0);
       transform-origin: right;
       animation: label-appear 500ms ease-in-out;
       animation-fill-mode: forwards;
@@ -75,6 +75,6 @@
   100% {
     color: inherit;
     opacity: 1;
-    transform: scaleX(100%);
+    transform: scaleX(1);
   }
 }

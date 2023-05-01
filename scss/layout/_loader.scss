@@ -55,10 +55,10 @@
     transform: scale(1.6);
   }
   99% {
-    display: 1;
+    display: initial;
   }
   100% {
-    display: 0;
+    display: none;
     transform: scale(1);
   }
 }

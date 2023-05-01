@@ -264,10 +264,10 @@ body {
     transform: scale(1.6);
   }
   99% {
-    display: 1;
+    display: initial;
   }
   100% {
-    display: 0;
+    display: none;
     transform: scale(1);
   }
 }
@@ -405,7 +405,7 @@ body {
   transition: all 0.25s;
 }
 .footer__title:hover {
-  color: lightgray;
+  color: #ff79da;
 }
 @media (min-width: 768px) {
   .footer__title {
@@ -440,7 +440,10 @@ body {
   transition: all 0.25s;
 }
 .footer__link:hover {
-  color: lightgray;
+  color: #ff79da;
+}
+.footer__link:hover i {
+  color: #99e2d0;
 }
 .footer__link--alt-size {
   width: 130px;
@@ -544,7 +547,7 @@ body {
   color: rgb(147, 86, 220);
 }
 .button-style2__link:active {
-  border: 1px solid rgba(255, 121, 218, 0.1);
+  background-color: rgba(255, 121, 218, 0.1);
 }
 
 /* # - Heart icon animation ------------------ # */
@@ -654,7 +657,10 @@ body {
 .restaurant-page .form input[type=radio]:checked + label::after {
   margin-right: 0;
 }
-.restaurant-page .form input[type=radio]:checked + label .form__subtitle, .restaurant-page .form input[type=radio]:checked + label .form__price {
+.restaurant-page .form input[type=radio]:checked + label .form__subtitle {
+  padding-right: 99px;
+}
+.restaurant-page .form input[type=radio]:checked + label .form__price {
   padding-right: 59px;
 }
 .restaurant-page .form label {
@@ -736,10 +742,12 @@ body {
 }
 .restaurant-page .form__subtitle {
   margin-top: 12px;
+  padding-right: 30px;
   transition: all 0.5s ease-in-out;
 }
 .restaurant-page .form__price {
   transition: all 0.5s ease-in-out;
+  padding-left: 15px;
 }
 .restaurant-page .form__description-container {
   display: flex;
@@ -959,7 +967,7 @@ body {
 }
 .restaurant-page__form label {
   opacity: 0%;
-  transform: scaleX(0%);
+  transform: scaleX(0);
   transform-origin: right;
   animation: label-appear 500ms ease-in-out;
   animation-fill-mode: forwards;
@@ -1010,6 +1018,6 @@ body {
   100% {
     color: inherit;
     opacity: 1;
-    transform: scaleX(100%);
+    transform: scaleX(1);
   }
 }

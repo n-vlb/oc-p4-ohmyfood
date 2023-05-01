@@ -34,7 +34,7 @@ footer {
     height: 27px;
     transition:all .25s;
     &:hover {
-      color: lightgray;
+      color: $gradient-secondary-color;
     }
     @include for-size(tablet) {
       width: 16%;
@@ -55,7 +55,10 @@ footer {
     width: 190px;
     transition:all .25s;
     &:hover {
-      color: lightgray;
+      color: $gradient-secondary-color;
+    }
+    &:hover  i{
+      color: $badge-primary-color;
     }
     &--alt-size {
       width: 130px;
