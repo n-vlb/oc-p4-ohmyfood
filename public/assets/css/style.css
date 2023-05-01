@@ -634,7 +634,7 @@ body {
   bottom: 32px;
 }
 
-.restaurant-page form {
+.restaurant-page .form {
   background: #f6f6f6;
   margin: 0 auto;
   display: flex;
@@ -643,30 +643,29 @@ body {
   align-items: initial;
   gap: 12px;
 }
-.restaurant-page form input[type=radio] {
+.restaurant-page .form input[type=radio] {
   display: none;
 }
-.restaurant-page form input[type=radio]:checked + label::before {
+.restaurant-page .form input[type=radio]:checked + label::before {
   transform: rotate(0deg);
   margin-right: 0;
 }
-.restaurant-page form input[type=radio]:checked + label::after {
+.restaurant-page .form input[type=radio]:checked + label::after {
   margin-right: 0;
 }
-.restaurant-page form input[type=radio]:checked + label .form__subtitle, .restaurant-page form input[type=radio]:checked + label .form__price {
+.restaurant-page .form input[type=radio]:checked + label .form__subtitle, .restaurant-page .form input[type=radio]:checked + label .form__price {
   padding-right: 59px;
 }
-.restaurant-page form label {
+.restaurant-page .form label {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
   align-items: initial;
   gap: 0;
   position: relative;
-  margin: 0 3.47vw;
-  padding-left: 15px;
-  padding-right: 15px;
   height: 69px;
+  margin: 0 3.47vw;
+  padding: 0 15px;
   border-radius: 15px;
   overflow: hidden;
   box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.1);
@@ -674,14 +673,14 @@ body {
   transition: box-shadow 0.5s;
 }
 @media (min-width: 1024px) {
-  .restaurant-page form label {
+  .restaurant-page .form label {
     margin: 0;
   }
 }
-.restaurant-page form label:hover, .restaurant-page form label:focus {
+.restaurant-page .form label:hover, .restaurant-page .form label:focus {
   box-shadow: 0px 4px 17px rgba(0, 0, 0, 0.15);
 }
-.restaurant-page form label::before {
+.restaurant-page .form label::before {
   color: white;
   content: "\f058";
   font-family: fontAwesome;
@@ -698,7 +697,7 @@ body {
   z-index: 1;
   transition: all 0.5s ease-in-out;
 }
-.restaurant-page form label::after {
+.restaurant-page .form label::after {
   content: "";
   position: absolute;
   right: 0;
@@ -710,7 +709,7 @@ body {
   background-color: #99e2d0;
   transition: all 0.5s ease-in-out;
 }
-.restaurant-page form .form__title {
+.restaurant-page .form__title {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
@@ -721,11 +720,11 @@ body {
   margin-left: 3.4vw;
 }
 @media (min-width: 1024px) {
-  .restaurant-page form .form__title {
+  .restaurant-page .form__title {
     margin-left: 0;
   }
 }
-.restaurant-page form .form__title::after {
+.restaurant-page .form__title::after {
   justify-self: flex-end;
   content: "";
   overflow: visible;
@@ -734,14 +733,14 @@ body {
   display: block;
   background-color: #99e2d0;
 }
-.restaurant-page form .form__subtitle {
+.restaurant-page .form__subtitle {
   margin-top: 12px;
   transition: all 0.5s ease-in-out;
 }
-.restaurant-page form .form__price {
+.restaurant-page .form__price {
   transition: all 0.5s ease-in-out;
 }
-.restaurant-page form .form__description-container {
+.restaurant-page .form__description-container {
   display: flex;
   flex-direction: initial;
   justify-content: space-between;
@@ -749,7 +748,7 @@ body {
   gap: initial;
   margin-bottom: 13.5px;
 }
-.restaurant-page form button {
+.restaurant-page .form button {
   margin: 28px auto 40px auto;
 }
 
@@ -963,38 +962,38 @@ body {
   opacity: 0%;
   transform: scaleX(0%);
   transform-origin: right;
-  animation: label-appear 100ms ease-out;
+  animation: label-appear 500ms ease-in-out;
   animation-fill-mode: forwards;
 }
 .restaurant-page__form label:nth-of-type(10) {
-  animation-delay: 1000ms;
+  animation-delay: 2000ms;
 }
 .restaurant-page__form label:nth-of-type(9) {
-  animation-delay: 900ms;
+  animation-delay: 1800ms;
 }
 .restaurant-page__form label:nth-of-type(8) {
-  animation-delay: 800ms;
+  animation-delay: 1600ms;
 }
 .restaurant-page__form label:nth-of-type(7) {
-  animation-delay: 700ms;
+  animation-delay: 1400ms;
 }
 .restaurant-page__form label:nth-of-type(6) {
-  animation-delay: 600ms;
+  animation-delay: 1200ms;
 }
 .restaurant-page__form label:nth-of-type(5) {
-  animation-delay: 500ms;
+  animation-delay: 1000ms;
 }
 .restaurant-page__form label:nth-of-type(4) {
-  animation-delay: 400ms;
+  animation-delay: 800ms;
 }
 .restaurant-page__form label:nth-of-type(3) {
-  animation-delay: 300ms;
+  animation-delay: 600ms;
 }
 .restaurant-page__form label:nth-of-type(2) {
-  animation-delay: 200ms;
+  animation-delay: 400ms;
 }
 .restaurant-page__form label:nth-of-type(1) {
-  animation-delay: 100ms;
+  animation-delay: 200ms;
 }
 
 @keyframes label-appear {
@@ -1002,17 +1001,15 @@ body {
     background-color: #008766;
     height: 69px;
   }
-  50% {
-    opacity: 20%;
+  51% {
+    opacity: 5%;
   }
-  80% {
-    opacity: 20%;
-  }
-  99% {
-    opacity: 1;
+  95% {
+    opacity: 5%;
     background-color: #99e2d0;
   }
   100% {
+    color: inherit;
     opacity: 1;
     transform: scaleX(100%);
   }

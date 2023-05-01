@@ -5,6 +5,7 @@
     height: 275px;
     width: 100%;
   }
+  //title and heart icon
   &__headline {
     margin: -40px auto 0 auto;
     max-width: 1055px;
@@ -32,6 +33,7 @@
     position: absolute;
     line-height: 41px;
   }
+  //sizing form
   &__form {
     max-width: 1055px;
     @include for-size(tablet) {
@@ -47,15 +49,15 @@
       opacity: 0%;
       transform: scaleX(0%);
       transform-origin: right;
-      animation: label-appear 100ms ease-out;
+      animation: label-appear 500ms ease-in-out;
       animation-fill-mode: forwards;
       // delay animation loop on form's labels
       @for $i from 10 through 1 {
         &:nth-of-type(#{$i}) {
-          animation-delay: $i * 100ms;
+          animation-delay: $i * 200ms;
         }
       }
-     }
+    }
   }
 }
 //animation setup
@@ -64,20 +66,15 @@
     background-color: $badge-secondary-color;
     height: 69px;
   }
-  10% {
+  51% {
+    opacity: 5%;
   }
-  50% {
-    opacity: 20%;
-  }
-  80% {
-    opacity: 20%;
-  }
-  99% {
-    opacity: 1;
+  95% {
+    opacity: 5%;
     background-color: $badge-primary-color;
   }
-
   100% {
+    color: inherit;
     opacity: 1;
     transform: scaleX(100%);
   }

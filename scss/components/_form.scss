@@ -1,83 +1,86 @@
-.restaurant-page form {
-  background: $restaurant-page-backgound;
-  margin: 0 auto;
-  @include flex($direction: column, $gap: 12px);
-  input[type="radio"] {
-    display: none;
-    &:checked + label::before {
-      transform: rotate(0deg); //flip icon in original position
-      margin-right: 0;
-    }
-    &:checked + label::after {
-      margin-right: 0; //translate "container"
-    }
-    &:checked + label .form__subtitle,
-    &:checked + label .form__price {
-      padding-right: 59px; // reduce description and title size.
-    }
-  }
-
-  label {
-    @include flex(column, space-between, initial, 0);
-    position: relative; // for ::before & ::after positionning
-    margin: 0 3.47vw;
-    padding-left: 15px;
-    padding-right: 15px;
-    height: 69px;
-    border-radius: 15px;
-    overflow: hidden; //hide ::before and ::after
-    box-shadow: 0px 4px 15px  rgba(0, 0, 0, 0.1);
-    background-color: white;
-    transition:box-shadow .5s;
-    @include for-size(desktop) {
-      margin: 0;
-    }
-    &:hover, &:focus{
-      box-shadow: 0px 4px 17px  rgba(0, 0, 0, 0.15);
-    }
-    // checkbox
-    &::before {
-      color: white;
-      content: "\f058";
-      font-family: fontAwesome;
-      font-size: 20px;
-      position: absolute;
-      right: 0;
-      top: 0;
-      height: inherit;
-      width: 59px;
-      line-height: 69px; //align vertically
-      text-align: center; //align horizontally
-      margin-right: -59px; //initial position
-      transform: rotate(180deg); // initial upside down position
-      z-index: 1;
-      transition: all 0.5s ease-in-out; //natural bezier transition
-    }
-    &::after {
-      content: "";
-      position: absolute;
-      right: 0;
-      top: 0;
-      height: inherit;
-      width: 59px;
-      margin-right: -59px;
-      border-radius: 0 15px 15px 0;
-      background-color: $badge-primary-color;
-      transition: all 0.5s ease-in-out;
-    }
-  }
+.restaurant-page {
+  //<-- form parent containers
   .form {
+    background: $restaurant-page-backgound;
+    margin: 0 auto;
+    @include flex($direction: column, $gap: 12px);
+    input[type="radio"] {
+      display: none;
+      &:checked + label::before {
+        transform: rotate(0deg); //flip icon in original position
+        margin-right: 0;
+      }
+      &:checked + label::after {
+        margin-right: 0; //translate "container"
+      }
+      &:checked + label .form__subtitle,
+      &:checked + label .form__price {
+        padding-right: 59px; // reduce description and title size.
+      }
+    }
+
+    label {
+      @include flex(column, space-between, initial, 0);
+      position: relative; // for ::before & ::after positionning
+      height: 69px;
+      margin: 0 3.47vw;
+      padding: 0 15px;
+      border-radius: 15px;
+      overflow: hidden; //hide ::before and ::after
+      box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.1);
+      background-color: white;
+      transition: box-shadow 0.5s;
+      @include for-size(desktop) {
+        margin: 0;
+      }
+      &:hover,
+      &:focus {
+        box-shadow: 0px 4px 17px rgba(0, 0, 0, 0.15);
+      }
+      // checkbox icon
+      &::before {
+        color: white;
+        content: "\f058";
+        font-family: fontAwesome;
+        font-size: 20px;
+        position: absolute;
+        right: 0;
+        top: 0;
+        height: inherit;
+        width: 59px;
+        line-height: 69px; //align vertically
+        text-align: center; //align horizontally
+        margin-right: -59px; //initial position
+        transform: rotate(180deg); // initial upside down position
+        z-index: 1;
+        transition: all 0.5s ease-in-out; //natural bezier transition
+      }
+      // checkbox icon container
+      &::after {
+        content: "";
+        position: absolute;
+        right: 0;
+        top: 0;
+        height: inherit;
+        width: 59px;
+        margin-right: -59px;
+        border-radius: 0 15px 15px 0;
+        background-color: $badge-primary-color;
+        transition: all 0.5s ease-in-out;
+      }
+    }
+
     &__title {
       @include flex($direction: column, $justify: space-between);
       height: 27px;
       margin-top: 40px;
       margin-left: 3.4vw;
       @include for-size(desktop) {
-        margin-left:0;
+        margin-left: 0;
       }
+      //underline title
       &::after {
         justify-self: flex-end;
-        //underline title
         content: "";
         overflow: visible;
         width: 40px;
@@ -97,8 +100,9 @@
       @include flex($justify: space-between);
       margin-bottom: 13.5px;
     }
-  }
-  button {
-    margin: 28px auto 40px auto;
+
+    button {
+      margin: 28px auto 40px auto;
+    }
   }
 }
