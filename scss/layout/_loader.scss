@@ -13,6 +13,7 @@
   @include for-size(desktop) {
     gap: 4rem;
   }
+
   &__img {
     width: 15rem;
     @include for-size(tablet) {
@@ -22,6 +23,7 @@
       width: 30rem;
     }
   }
+
   &__dot {
     width: 1.6rem;
     height: 1.6rem;
@@ -37,7 +39,8 @@
       height: 3.2rem;
     }
   }
-  //   this loop replace repetitive lines of code
+  // this loop replace repetitive lines of code
+  // it delay animation and adapt color for each dot.
   @for $i from 1 through 5 {
     &__dot:nth-child(#{$i}) {
       animation-delay: 100ms * $i;
@@ -46,6 +49,7 @@
   }
 }
 //animation dots setup
+//each dot grow and shrink with delay
 @keyframes slide {
   0% {
     transform: scale(1);
@@ -62,7 +66,8 @@
     transform: scale(1);
   }
 }
-//animation page setup
+//animation loader page setup
+// loader page appear, grow with opacity reduction and desappear.
 @keyframes loading {
   0% {
     z-index: 5;

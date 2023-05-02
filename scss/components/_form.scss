@@ -93,15 +93,18 @@
         background-color: $badge-primary-color;
       }
     }
+
     &__subtitle {
       margin-top: 12px;
       padding-right:30px;
       transition: all 0.5s ease-in-out; //natural bezier transition
     }
+
     &__price {
       transition: all 0.5s ease-in-out; //natural bezier transition
       padding-left:15px;
     }
+    
     &__description-container {
       @include flex($justify: space-between);
       margin-bottom: 13.5px;

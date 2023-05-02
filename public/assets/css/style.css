@@ -92,7 +92,8 @@ body {
   color: inherit;
 }
 
-.localisation-container input[type=text], .localisation-container input[type=text]::placeholder {
+.localisation-container input[type=text],
+.localisation-container input[type=text]::placeholder {
   font-family: "Roboto", sans-serif;
   font-size: 16px;
   font-weight: 500;
@@ -907,6 +908,7 @@ body {
   }
 }
 
+/* # - restaurant page ----------------------- # */
 .restaurant-page {
   background-color: white;
 }
@@ -1006,7 +1008,6 @@ body {
 @keyframes label-appear {
   0% {
     background-color: #008766;
-    height: 69px;
   }
   51% {
     opacity: 5%;

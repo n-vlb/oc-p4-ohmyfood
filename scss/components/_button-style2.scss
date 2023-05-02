@@ -56,8 +56,8 @@
         color: $gradient-primary-color;
       }
     }
+// adding pink background if button is active
     &:active {
-      // border: 1px solid rgba($gradient-secondary-color, 0.1);
       background-color: rgba($gradient-secondary-color, 0.1);
     }
   }

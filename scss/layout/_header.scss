@@ -3,7 +3,6 @@
 .header {
   @include flex($align: center, $justify:center);
  
-  
   &__back-arrow {
     @include flex($align: center, $justify: center);
     width: 30px;
@@ -27,13 +26,14 @@
     @include for-size(desktop) {
       height: 96px;
     }
-
   }
+
   &__logo-txt {
     @media (min-width: 1440px) {
       display: none; //hide logo version txt
     }
   }
+  
   &__logo-img {
     display: none; //hide logo version svg
     @media (min-width: 1440px) {

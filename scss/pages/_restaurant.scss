@@ -1,3 +1,4 @@
+/* # - restaurant page ----------------------- # */
 .restaurant-page {
   background-color: white;
   &__picture {
@@ -60,10 +61,10 @@
   }
 }
 //animation setup
+//label grow from the right with opacity reduction and is fully displayed
 @keyframes label-appear {
   0% {
     background-color: $badge-secondary-color;
-    height: 69px;
   }
   51% {
     opacity: 5%;

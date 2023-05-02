@@ -53,10 +53,11 @@ footer {
     @include flex($align: center, $gap: 10px);
     height: 19px;
     width: 190px;
-    transition:all .25s;
+    transition:all .25s;//smooth :hover transition
     &:hover {
       color: $gradient-secondary-color;
     }
+    //different color for icon
     &:hover  i{
       color: $badge-primary-color;
     }

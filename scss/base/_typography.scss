@@ -11,12 +11,11 @@ body {
 
 //main homepage
 .localisation-container {
-  input[type="text"], input[type="text"]::placeholder{
+  input[type="text"],
+  input[type="text"]::placeholder {
     @include typography($weight: $semi-bold);
-    color:inherit;
-   
+    color: inherit;
   }
- 
 }
 
 .reservation {

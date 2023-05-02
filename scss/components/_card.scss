@@ -13,14 +13,12 @@
 
   //this class add badge "Nouveau" to the card and change shadow color on card and badge.
   &--new {
-    // &:hover,
     &:hover::before {
       box-shadow: 1px 4px 20px rgba($badge-secondary-color, 0.3);
     }
     &:hover::before {
       background-color: $badge-primary-color--light;
     }
-
     &::before {
       content: "Nouveau";
       position: absolute;
@@ -49,7 +47,8 @@
     @include flex($direction: column, $gap: 5px);
     padding: 0 25px 0 13px;
   }
-  //insert heart icon
+
+  //positionning heart icon
   .fa-heart {
     width: 26px;
     position: absolute;
