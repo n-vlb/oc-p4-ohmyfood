@@ -2,6 +2,8 @@
 
 Projet N°4 parcours intégrateur web OpenClassrooms
 
+![ohmyfood](https://share.nvlb.fr/images/oc/ohmyfood.png)
+
 ## Lien GitHub
 
 https://github.com/n-vlb/oc-p4-ohmyfood/
