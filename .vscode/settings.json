@@ -1,0 +1,12 @@
+{
+  "liveSassCompile.settings.forceBaseDirectory": "",
+  "liveSassCompile.settings.compileOnWatch": true,
+  "liveSassCompile.settings.formats": [
+    {
+      "format": "expanded",
+      "extensionName": ".css",
+      "savePath": "/public/assets/css",
+      "savePathReplacementPairs": null
+    }
+  ]
+}
