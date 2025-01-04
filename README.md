@@ -4,11 +4,11 @@ Projet N°4 parcours intégrateur web OpenClassrooms
 
 ## Lien GitHub
 
-https://github.com/Strikelab/OC-P4-OhMyFood/
+https://github.com/n-vlb/oc-p4-ohmyfood/
 
-## Lien GitHub Pages
+## Lien du site
 
-https://oc-ohmyfood.strikelab.fr/
+https://ohmyfood.nvlb.fr/
 
 ## Technologies
 
@@ -17,7 +17,11 @@ https://oc-ohmyfood.strikelab.fr/
 
 ## Auteurs
 
-- StrikeLab contact@strikelab.fr
+- NVLB contact@nvlb.fr
+
+## Remerciements
+
+Merci à [withaarzoo](https://github.com/withaarzoo) pour son [animated-loader](https://github.com/withaarzoo/Animated-Loader)
 
 ## License
 
