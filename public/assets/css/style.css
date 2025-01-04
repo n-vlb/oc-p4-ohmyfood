@@ -188,7 +188,7 @@ body {
   opacity: 1;
   position: fixed;
   overflow: hidden;
-  animation: loading 3s;
+  animation: loading 4.2s;
 }
 
 .loader-title {
@@ -645,6 +645,9 @@ body {
   transition: opacity 0.5s;
   position: absolute;
 }
+.button-style1:hover {
+  cursor: pointer;
+}
 .button-style1:hover::before, .button-style1:focus::before {
   opacity: 1;
 }
@@ -852,6 +855,7 @@ body {
   }
 }
 .restaurant-page .form label:hover, .restaurant-page .form label:focus {
+  cursor: pointer;
   box-shadow: 0px 4px 17px rgba(0, 0, 0, 0.15);
 }
 .restaurant-page .form label::before {

@@ -15,8 +15,8 @@
       &:checked + label::after {
         margin-right: 0; //translate "container" default:59px
       }
-      &:checked + label .form__subtitle{
-        padding-right:calc(59px + 40px)
+      &:checked + label .form__subtitle {
+        padding-right: calc(59px + 40px);
       }
       &:checked + label .form__price {
         padding-right: 59px; // reduce description and title size.
@@ -39,6 +39,7 @@
       }
       &:hover,
       &:focus {
+        cursor: pointer;
         box-shadow: 0px 4px 17px rgba(0, 0, 0, 0.15);
       }
       // custom radio button icon
@@ -67,7 +68,7 @@
         top: 0;
         height: inherit;
         width: 59px;
-        margin-right: -59px;//initial position
+        margin-right: -59px; //initial position
         border-radius: 0 15px 15px 0;
         background-color: $badge-primary-color;
         transition: all 0.5s ease-in-out;
@@ -96,15 +97,15 @@
 
     &__subtitle {
       margin-top: 12px;
-      padding-right:30px;
+      padding-right: 30px;
       transition: all 0.5s ease-in-out; //natural bezier transition
     }
 
     &__price {
       transition: all 0.5s ease-in-out; //natural bezier transition
-      padding-left:15px;
+      padding-left: 15px;
     }
-    
+
     &__description-container {
       @include flex($justify: space-between);
       margin-bottom: 13.5px;

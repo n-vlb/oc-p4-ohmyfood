@@ -36,6 +36,9 @@
     position: absolute; //pas de mofification du flux de la page
     // border: 1px solid black;
   }
+  &:hover {
+    cursor: pointer;
+  }
 
   &:hover::before,
   &:focus::before {
